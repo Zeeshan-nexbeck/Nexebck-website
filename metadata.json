@@ -1,0 +1,8 @@
+{
+  "name": "Remix v3 multi page nexbeck site ",
+  "description": "design jugdment of google ai studion redesigned site ",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

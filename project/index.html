@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Document Metadata & Viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexbeck — Web Design Agency for Australian Electricians &amp; Trades</title>
+  <meta name="description" content="Professional websites designed for Australian electricians and trade businesses. Fast 7-14 day delivery, fixed transparent pricing, and 100% full ownership." />
+  <meta property="og:title" content="Nexbeck — Web Design Agency for Australian Electricians &amp; Trades" />
+  <meta property="og:description" content="Professional websites designed for Australian electricians and trade businesses. Fast 7-14 day delivery, fixed transparent pricing, and 100% full ownership." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Shared Global Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nexbeck Web Design",
+    "description": "Professional websites designed and built for Australian electricians and trade contractors.",
+    "priceRange": "$490 - $890 AUD",
+    "areaServed": "Australia",
+    "serviceType": "Web Design for Electricians and Trade Businesses"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Subtle Ambient Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-radial-glow"></div>
+
+  <!-- ========================================================================
+       SHARED FIXED HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="main-header">
+    <div class="header-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link" aria-label="Nexbeck Home">
+        <img src="images/logo.png" alt="Nexbeck" class="brand-logo-img" />
+        <span class="brand-text">NEXBECK</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" id="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="contact.html" class="btn-primary desktop-only-btn">
+          <span>Get a Free Quote</span>
+          <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+        </a>
+
+        <button type="button" id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open mobile navigation menu">
+          <span class="material-symbols-outlined" id="mobile-menu-icon" style="font-size: 22px;">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link active">
+          <span>Home</span>
+        </a>
+        <a href="services.html" class="mobile-nav-link">
+          <span>Services</span>
+        </a>
+        <a href="about.html" class="mobile-nav-link">
+          <span>About</span>
+        </a>
+        <a href="contact.html" class="mobile-nav-link">
+          <span>Contact</span>
+        </a>
+        <div style="padding-top: 12px;">
+          <a href="contact.html" class="btn-primary" style="width: 100%; height: 44px;">
+            <span>Get a Free Quote</span>
+            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN HOMEPAGE CONTENT
+       ======================================================================== -->
+  <main style="padding-top: 76px; position: relative;">
+
+    <!-- SECTION 1: HERO (Focused on Web Design for Australian Electricians) -->
+    <section id="home-hero" class="hero-section site-wrapper">
+      <div class="hero-grid">
+        <!-- Hero Left Column: Narrative Headline, Subheadline & Action Buttons -->
+        <div class="hero-content">
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            <span>Websites Engineered for Australian Electricians</span>
+          </div>
+
+          <h1 class="hero-title">
+            Stop Chasing Directory Leads. Win High-Value Electrical Jobs.
+          </h1>
+
+          <p class="hero-desc">
+            Tired of paying $60+ for shared leads on HiPages and Airtasker where you compete against 4 other sparkies on price? We engineer high-speed, mobile-optimized websites for Australian electrical contractors with 1-tap emergency dialers, REC licence verification, and local suburb targeting that turns searches into booked private work.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="contact.html" class="btn-primary" style="height: 48px; padding: 0 28px;">
+              <span>Get a Free Quote</span>
+              <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+            </a>
+            <a href="services.html" class="btn-ghost" style="height: 48px; padding: 0 24px;">
+              <span>View Packages &amp; Pricing</span>
+              <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+            </a>
+          </div>
+
+          <div class="hero-trust-list">
+            <span class="trust-item">
+              <span class="material-symbols-outlined check-icon">check_circle</span>
+              <span>7–14 Day Delivery</span>
+            </span>
+            <span class="trust-item">
+              <span class="material-symbols-outlined check-icon">check_circle</span>
+              <span>Fixed From $490 AUD</span>
+            </span>
+            <span class="trust-item">
+              <span class="material-symbols-outlined check-icon">check_circle</span>
+              <span>100% Code &amp; Domain Ownership</span>
+            </span>
+            <span class="trust-item">
+              <span class="material-symbols-outlined check-icon">check_circle</span>
+              <span>Zero Monthly Retainers</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Website Showcase Mockup (Real Design Visual) -->
+        <div class="hero-visual">
+          <div class="showcase-wrapper">
+            <div class="showcase-toolbar">
+              <span class="showcase-tag">Interactive Sparky Template Preview</span>
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <div class="mockup-mode-switch" aria-label="Simulated Site Mode">
+                  <button type="button" class="mockup-mode-btn active" data-mode="standard">
+                    <span class="material-symbols-outlined" style="font-size: 13px;">wb_sunny</span>
+                    <span>Daytime</span>
+                  </button>
+                  <button type="button" class="mockup-mode-btn emergency-mode-btn" data-mode="emergency">
+                    <span class="material-symbols-outlined" style="font-size: 13px;">flash_on</span>
+                    <span>24/7 Emergency</span>
+                  </button>
+                </div>
+                <div class="showcase-device-tabs" aria-label="Device Preview Modes">
+                  <button type="button" class="showcase-device-btn active" data-view="desktop">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">desktop_windows</span>
+                    <span>Desktop</span>
+                  </button>
+                  <button type="button" class="showcase-device-btn" data-view="mobile">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">smartphone</span>
+                    <span>Mobile</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Simulated Browser Frame -->
+            <div id="hero-showcase-container" class="browser-frame">
+              <div class="browser-top-bar">
+                <div class="browser-controls">
+                  <span class="ctrl-dot red"></span>
+                  <span class="ctrl-dot yellow"></span>
+                  <span class="ctrl-dot green"></span>
+                </div>
+                <div class="browser-url">
+                  <span class="material-symbols-outlined lock-icon">lock</span>
+                  <span>apex-electrical.com.au</span>
+                </div>
+              </div>
+
+              <!-- Inside Preview Body -->
+              <div class="preview-site-content">
+                <!-- Contractor Header -->
+                <div class="preview-trade-header">
+                  <div class="preview-trade-brand">
+                    <span class="preview-trade-name">Apex Electrical &amp; Solar</span>
+                    <span class="preview-trade-rec">Licensed REC #38291 • Master Electrician</span>
+                  </div>
+                  <span class="preview-badge-status">
+                    <span style="width: 5px; height: 5px; border-radius: 50%; background: #10b981;"></span>
+                    <span>Sydney Metro</span>
+                  </span>
+                </div>
+
+                <!-- Hero Section of Contractor Website -->
+                <div class="preview-hero-mock">
+                  <h4>Domestic &amp; Commercial Electrical Contractors</h4>
+                  <p>
+                    Switchboard upgrades, EV wallbox chargers, LED rewiring, and 24/7 emergency dispatch across Sydney's Inner West &amp; Eastern Suburbs.
+                  </p>
+
+                  <div class="preview-action-row">
+                    <button type="button" id="preview-call-btn" class="preview-call-btn">
+                      <span class="material-symbols-outlined" style="font-size: 15px;">call</span>
+                      <span>Call 0400 123 456</span>
+                    </button>
+                    <span style="font-family: var(--font-ui); font-size: 0.6875rem; color: var(--text-dim);">
+                      (Click to test 1-tap dialer)
+                    </span>
+                  </div>
+                  <div id="preview-call-status" class="preview-status-feedback"></div>
+                </div>
+
+                <!-- Core Trade Services Grid -->
+                <div class="preview-services-grid">
+                  <div class="preview-service-tag">
+                    <span class="material-symbols-outlined">bolt</span>
+                    <span>Switchboard Upgrades</span>
+                  </div>
+                  <div class="preview-service-tag">
+                    <span class="material-symbols-outlined">ev_station</span>
+                    <span>EV Charger Installs</span>
+                  </div>
+                  <div class="preview-service-tag">
+                    <span class="material-symbols-outlined">solar_power</span>
+                    <span>Solar &amp; Battery</span>
+                  </div>
+                  <div class="preview-service-tag">
+                    <span class="material-symbols-outlined">verified</span>
+                    <span>AS/NZS 3000 Compliant</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Hotspot Inspection Bar -->
+              <div class="showcase-hotspots-bar">
+                <span style="font-family: var(--font-ui); font-size: 0.6875rem; color: var(--text-dim); margin-right: 4px; align-self: center;">Why It Converts:</span>
+                <button type="button" class="hotspot-pill active" data-feature="call">
+                  <span>⚡ 1-Tap Call</span>
+                </button>
+                <button type="button" class="hotspot-pill" data-feature="rec">
+                  <span>🔒 REC Licence</span>
+                </button>
+                <button type="button" class="hotspot-pill" data-feature="suburbs">
+                  <span>📍 Suburb Turf</span>
+                </button>
+                <button type="button" class="hotspot-pill" data-feature="highmargin">
+                  <span>💰 Switchboard Focus</span>
+                </button>
+              </div>
+              <div id="hotspot-explanation-text" class="hotspot-explanation visible">
+                ⚡ Instant Tap-to-Call: When someone has blown power or tripped fuses, they want to speak to a sparky in 5 seconds. One tap dials your mobile immediately.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP: AUSTRALIAN TRADE & REGULATORY BODIES COMPLIANCE -->
+    <div style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); background: var(--bg-surface-elevated); padding: 16px 0;">
+      <div class="site-wrapper" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: clamp(16px, 3vw, 36px); font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-dim); font-weight: 600;">
+        <span style="color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.6875rem;">Engineered for Australian Standards:</span>
+        <span style="display: inline-flex; align-items: center; gap: 6px; color: var(--text-main);">
+          <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-accent);">verified</span>
+          <span>REC &amp; Contractor Licences (VIC / NSW / QLD / WA)</span>
+        </span>
+        <span style="display: inline-flex; align-items: center; gap: 6px; color: var(--text-main);">
+          <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-accent);">shield</span>
+          <span>Master Electricians Australia (MEA)</span>
+        </span>
+        <span style="display: inline-flex; align-items: center; gap: 6px; color: var(--text-main);">
+          <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-accent);">bolt</span>
+          <span>NECA Member Compatibility</span>
+        </span>
+        <span style="display: inline-flex; align-items: center; gap: 6px; color: var(--text-main);">
+          <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-accent);">rule</span>
+          <span>AS/NZS 3000 Wiring Rules Verification</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- SECTION 2: THE DIRECTORY TRAP VS TRADITIONAL AGENCY VS NEXBECK (ASYMMETRIC SPLIT) -->
+    <section id="comparison" class="site-wrapper" style="padding-top: clamp(48px, 7vh, 88px); padding-bottom: clamp(40px, 6vh, 72px);">
+      <div class="section-header">
+        <span class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 15px;">balance</span>
+          <span>Market Comparison</span>
+        </span>
+        <h2 class="section-title">Why Traditional Ways of Getting Electrical Leads Are Broken</h2>
+        <p class="section-subtitle">
+          Whether you are burning cash on shared lead platforms or trapped in a $350/month agency retainer, here is how the models compare:
+        </p>
+      </div>
+
+      <div class="comp-asymmetric-split">
+        <!-- Left Column: The 2 Flawed Models (Unboxed Editorial Breakdown) -->
+        <div class="comp-editorial-left">
+          <!-- Flaw 1 -->
+          <div class="comp-flaw-item">
+            <div class="comp-flaw-header">
+              <span class="comp-flaw-name">01. Lead Marketplaces (HiPages, Oneflare, Airtasker)</span>
+              <span class="comp-flaw-cost">$40–$90 / shared lead</span>
+            </div>
+            <p class="comp-flaw-desc">
+              Directories sell the exact same homeowner request to 3 to 5 local sparkies at once. You pay upfront just for the right to quote, forcing an aggressive race-to-the-bottom on price.
+            </p>
+            <ul class="comp-flaw-points">
+              <li class="comp-flaw-point">
+                <span class="material-symbols-outlined">close</span>
+                <span>You build zero personal brand equity; the marketplace owns your customers.</span>
+              </li>
+              <li class="comp-flaw-point">
+                <span class="material-symbols-outlined">close</span>
+                <span>Stop buying credits, and your inbound leads instantly drop to zero.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Flaw 2 -->
+          <div class="comp-flaw-item" style="border-bottom: none; padding-bottom: 0;">
+            <div class="comp-flaw-header">
+              <span class="comp-flaw-name">02. Traditional Web Agencies</span>
+              <span class="comp-flaw-cost" style="color: var(--text-dim); background: var(--bg-surface-elevated);">$3,000+ &amp; $300/mo lock-in</span>
+            </div>
+            <p class="comp-flaw-desc">
+              Generic digital agencies charge thousands upfront and force you into recurring monthly maintenance retainers on bloated, slow WordPress setups.
+            </p>
+            <ul class="comp-flaw-points">
+              <li class="comp-flaw-point">
+                <span class="material-symbols-outlined">close</span>
+                <span>Months of committee meetings while competitors take your local work.</span>
+              </li>
+              <li class="comp-flaw-point">
+                <span class="material-symbols-outlined">close</span>
+                <span>They hold your domain and code hostage if you ever cancel their retainer.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Column: The Standout Nexbeck Focal Card (Single Focal Anchor) -->
+        <div class="tradie-comp-card highlight" style="margin: 0;">
+          <div>
+            <span class="tradie-comp-badge good">The Nexbeck Alternative</span>
+            <h3 class="tradie-comp-title">A Digital Asset You Actually Own</h3>
+            <p class="tradie-comp-price" style="color: var(--color-accent); font-size: 1.375rem;">$490 or $890 AUD (Fixed Once)</p>
+            <p style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted); margin-top: 6px; line-height: 1.55;">
+              Bespoke websites engineered specifically for Australian electricians. Direct phone calls, 7–14 day delivery, and zero monthly fees.
+            </p>
+
+            <ul class="tradie-comp-list">
+              <li class="tradie-comp-item positive">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>100% full source code and domain ownership</span>
+              </li>
+              <li class="tradie-comp-item positive">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>All enquiries go straight to your personal or work phone</span>
+              </li>
+              <li class="tradie-comp-item positive">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>Free or ultra-cheap edge hosting ($0 to $10/year for domain)</span>
+              </li>
+              <li class="tradie-comp-item positive">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>Just 1 booked switchboard job pays off the entire site</span>
+              </li>
+            </ul>
+          </div>
+          <div style="padding: 12px 14px; background: rgba(201, 138, 44, 0.12); border-radius: var(--radius-sm); font-size: 0.8125rem; color: var(--text-main); font-weight: 700; border: 1px solid var(--color-accent-border);">
+            ✓ Guaranteed 7 to 14 day delivery directly to your phone
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: INTERACTIVE JOB PAYBACK / ROI CALCULATOR (OPEN EDITORIAL LAYOUT — ZERO BOXES) -->
+    <section id="roi-calculator" class="site-wrapper" style="padding-bottom: clamp(56px, 8vh, 96px);">
+      <div class="calc-open-container">
+        <div class="section-header">
+          <span class="section-eyebrow">
+            <span class="material-symbols-outlined" style="font-size: 15px;">calculate</span>
+            <span>Job Payback Math</span>
+          </span>
+          <h2 class="section-title">See How Just 1 Job Pays For Your Entire Website</h2>
+          <p class="section-subtitle">
+            Tradies don't need fluffy agency promises. Click any common electrical job below to see how quickly a single booked job recoups your entire $890 Full Site Package investment:
+          </p>
+        </div>
+
+        <!-- Job Selection Tabs (Unboxed Architectural Selectors) -->
+        <div class="calc-job-buttons-grid">
+          <button type="button" class="calc-job-btn active" data-job="switchboard">
+            <span class="calc-job-name">Switchboard Upgrade</span>
+            <span class="calc-job-price">Avg Ticket: $1,400 AUD</span>
+          </button>
+          <button type="button" class="calc-job-btn" data-job="evcharger">
+            <span class="calc-job-name">EV Wallbox Charger</span>
+            <span class="calc-job-price">Avg Ticket: $1,200 AUD</span>
+          </button>
+          <button type="button" class="calc-job-btn" data-job="battery">
+            <span class="calc-job-name">Solar &amp; Home Battery</span>
+            <span class="calc-job-price">Avg Ticket: $2,800 AUD</span>
+          </button>
+          <button type="button" class="calc-job-btn" data-job="rewire">
+            <span class="calc-job-name">House LED Rewire</span>
+            <span class="calc-job-price">Avg Ticket: $3,600 AUD</span>
+          </button>
+          <button type="button" class="calc-job-btn" data-job="aircon">
+            <span class="calc-job-name">Split System Air Con</span>
+            <span class="calc-job-price">Avg Ticket: $1,600 AUD</span>
+          </button>
+          <button type="button" class="calc-job-btn" data-job="emergency">
+            <span class="calc-job-name">Emergency Callout</span>
+            <span class="calc-job-price">Avg Ticket: $450 AUD</span>
+          </button>
+        </div>
+
+        <!-- Interactive Readout Panel -->
+        <div class="calc-display-panel">
+          <div>
+            <span class="calc-highlight-pill">
+              <span class="material-symbols-outlined" style="font-size: 15px;">check_circle</span>
+              <span>100% Breakeven Guarantee</span>
+            </span>
+            <h3 id="calc-selected-job-title" class="calc-math-headline">
+              Main Switchboard Upgrade &amp; RCD Safety Switches
+            </h3>
+            <p id="calc-selected-comparison" class="calc-math-desc">
+              One single switchboard replacement completely pays off your $890 Full Site Package with $60 instant net profit on day one.
+            </p>
+            <div style="margin-top: 14px; font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-dim);">
+              *Based on standard Australian East Coast contractor labour &amp; materials markups.
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-left: 1px solid var(--border-subtle); padding-left: clamp(20px, 3vw, 32px);">
+            <div>
+              <span class="calc-stat-label">Payback Timeline</span>
+              <span id="calc-payback-jobs-count" class="calc-stat-value" style="display: block; margin-top: 6px;">1 Job</span>
+            </div>
+            <div>
+              <span class="calc-stat-label">Net Profit Margin</span>
+              <span id="calc-profit-margin-value" class="calc-stat-value" style="display: block; margin-top: 6px;">+$950</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: THREE CORE PROMISES (OPEN EDITORIAL LAYOUT — ZERO BOXES) -->
+    <section id="pillars" class="pillars-section site-wrapper" style="border-top: 1px solid var(--border-subtle);">
+      <div class="section-header">
+        <span class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 15px;">verified</span>
+          <span>Our Three Core Promises</span>
+        </span>
+        <h2 class="section-title">Built for Busy Australian Trade Contractors</h2>
+        <p class="section-subtitle">
+          We designed our service around what tradesmen actually need: dependable quality, rapid delivery, and transparent fixed pricing without corporate agency bloat.
+        </p>
+      </div>
+
+      <div class="editorial-pillars-grid">
+        <!-- Promise 1: Quality -->
+        <div class="editorial-pillar-item">
+          <span class="editorial-pillar-num">01</span>
+          <div>
+            <h3 class="editorial-pillar-title">Mobile-First Trade Design</h3>
+            <p class="editorial-pillar-desc">
+              Most homeowners find electricians on their smartphones during an emergency or after hours. We design lightning-fast pages with prominent 1-tap emergency dialers, clear REC licence verification, and clean service breakdowns that convert visitors into booked work.
+            </p>
+          </div>
+          <div class="editorial-pillar-badge">
+            <span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span>
+            <span>Sub-Second 4G/5G Speed</span>
+          </div>
+        </div>
+
+        <!-- Promise 2: Speed -->
+        <div class="editorial-pillar-item">
+          <span class="editorial-pillar-num">02</span>
+          <div>
+            <h3 class="editorial-pillar-title">Delivered in 7 to 14 Days</h3>
+            <p class="editorial-pillar-desc">
+              You don't have months to wait on sluggish agency committees. From your initial 15-minute intake brief to a fully operational website live on your .com.au domain in 1 to 2 weeks flat — ready for your van signage and local Google visibility.
+            </p>
+          </div>
+          <div class="editorial-pillar-badge">
+            <span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span>
+            <span>Guaranteed Sprint Timelines</span>
+          </div>
+        </div>
+
+        <!-- Promise 3: Fixed Price -->
+        <div class="editorial-pillar-item">
+          <span class="editorial-pillar-num">03</span>
+          <div>
+            <h3 class="editorial-pillar-title">Transparent Under $1,000</h3>
+            <p class="editorial-pillar-desc">
+              Clear packages ($490 for Starter, $890 for Full Site) with zero hidden fees, zero forced monthly retainers, and zero platform lock-in. You own 100% of your website code and domain from day one, with free or ultra-cheap edge hosting.
+            </p>
+          </div>
+          <div class="editorial-pillar-badge">
+            <span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span>
+            <span>100% Code &amp; Domain Ownership</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHY AUSTRALIAN TRADES NEED A WEBSITE (OPEN ASYMMETRIC SPREAD — ZERO BOX CARDS) -->
+    <section id="why-a-website" class="trade-value-section site-wrapper">
+      <div class="editorial-value-split">
+        <!-- Left: Narrative Lead & Pullquote -->
+        <div class="editorial-value-narrative">
+          <span class="section-eyebrow">
+            <span class="material-symbols-outlined" style="font-size: 15px;">lightbulb</span>
+            <span>The Modern Trade Reality</span>
+          </span>
+          <h2 class="section-title" style="font-size: clamp(1.75rem, 2.8vw, 2.5rem);">
+            Word of mouth wins the recommendation. Your website closes the deal.
+          </h2>
+          <p style="font-family: var(--font-body); font-size: 1rem; color: var(--text-muted); line-height: 1.65;">
+            Australian homeowners don't just call blind anymore. When a neighbor or builder recommends your name, the customer searches your business on their smartphone while standing in their kitchen. If your site looks professional, loads instantly, and shows your REC licence, they dial immediately.
+          </p>
+
+          <div class="editorial-lead-quote">
+            "If they search your business and find a dead link, an abandoned Facebook page, or an unverified mobile number, they move straight on to the next licensed electrician on Google."
+          </div>
+        </div>
+
+        <!-- Right: Clean Stacked Editorial List (Zero Cards) -->
+        <div class="editorial-value-list">
+          <!-- Row 1 -->
+          <div class="editorial-value-row">
+            <span class="editorial-value-index">01</span>
+            <div>
+              <h3 class="editorial-value-heading">Turn Local Searches into Direct Calls</h3>
+              <p class="editorial-value-text">
+                When a homeowner or builder searches for an electrician in your suburbs, having a dedicated website with local SEO puts your business directly in front of active buyers instead of losing out to competitors.
+              </p>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="editorial-value-row">
+            <span class="editorial-value-index">02</span>
+            <div>
+              <h3 class="editorial-value-heading">Instant Trust with REC Licences &amp; Badges</h3>
+              <p class="editorial-value-text">
+                Displaying your electrical contractor licence, Master Electricians affiliation, and insurance upfront reassures homeowners and commercial clients that you are a qualified professional they can trust with their home.
+              </p>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="editorial-value-row">
+            <span class="editorial-value-index">03</span>
+            <div>
+              <h3 class="editorial-value-heading">Win High-Value Switchboard &amp; EV Work</h3>
+              <p class="editorial-value-text">
+                Highlight high-margin specialties like main switchboard upgrades, EV charger installations, solar battery setups, and commercial rewires so customers call you for larger, more profitable jobs instead of small nuisance callouts.
+              </p>
+            </div>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="editorial-value-row" style="border-bottom: none;">
+            <span class="editorial-value-index">04</span>
+            <div>
+              <h3 class="editorial-value-heading">True Ownership With Zero Monthly Fees</h3>
+              <p class="editorial-value-text">
+                Unlike rental platforms or subscription builders that hold your domain and files hostage, you own 100% of your website code. Pay once, host affordably, and keep full control of your digital asset forever.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5B: INTERACTIVE SUBURB TURF & LOCAL SEO SIMULATOR (OPEN EDITORIAL ARCHITECTURE) -->
+    <section id="suburb-turf-simulator" class="turf-simulator-section site-wrapper" style="border-top: 1px solid var(--border-subtle); padding-top: clamp(48px, 7vh, 88px); padding-bottom: clamp(48px, 7vh, 88px);">
+      <div class="section-header">
+        <span class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 15px;">radar</span>
+          <span>Interactive Turf Simulator</span>
+        </span>
+        <h2 class="section-title">Explore Your Local Suburb Coverage &amp; Search Demand</h2>
+        <p class="section-subtitle">
+          Australian homeowners search by suburb when their power trips or when upgrading to an EV charger. Select your territory below to test how our Schema.org geo-targeting maps your service radius:
+        </p>
+      </div>
+
+      <!-- Territory Selector Tabs -->
+      <div class="turf-region-tabs" role="tablist" aria-label="Australian Metro Regions">
+        <button type="button" class="turf-region-btn active" data-region="sydney">
+          <span class="material-symbols-outlined" style="font-size: 15px;">location_city</span>
+          <span>Sydney Metro</span>
+        </button>
+        <button type="button" class="turf-region-btn" data-region="melbourne">
+          <span class="material-symbols-outlined" style="font-size: 15px;">location_city</span>
+          <span>Melbourne Metro</span>
+        </button>
+        <button type="button" class="turf-region-btn" data-region="brisbane">
+          <span class="material-symbols-outlined" style="font-size: 15px;">location_city</span>
+          <span>Brisbane &amp; SE QLD</span>
+        </button>
+        <button type="button" class="turf-region-btn" data-region="perth">
+          <span class="material-symbols-outlined" style="font-size: 15px;">location_city</span>
+          <span>Perth &amp; WA</span>
+        </button>
+        <button type="button" class="turf-region-btn" data-region="adelaide">
+          <span class="material-symbols-outlined" style="font-size: 15px;">location_city</span>
+          <span>Adelaide &amp; SA</span>
+        </button>
+      </div>
+
+      <!-- Open Editorial Simulator Grid -->
+      <div class="turf-simulator-container">
+        <!-- Left: Territory Details, Suburb Cluster & Custom Suburb Scanner -->
+        <div class="turf-left-col">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+            <h3 id="turf-region-name" class="turf-region-headline">Sydney Metro &amp; Eastern Suburbs Radius</h3>
+            <span class="turf-status-pill">
+              <span class="turf-live-dot"></span>
+              <span>15km Schema Geo-Fence</span>
+            </span>
+          </div>
+
+          <p style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted); margin-top: 8px; line-height: 1.6;">
+            Targeted suburb keywords and LocalBusiness microdata injected into your website so Google surfaces your site when homeowners in these suburbs search:
+          </p>
+
+          <!-- Interactive Suburbs Chips List -->
+          <div id="turf-suburbs-list" class="turf-suburbs-grid">
+            <!-- Populated dynamically via JS -->
+          </div>
+
+          <!-- Custom Suburb Search Bar -->
+          <div class="turf-custom-search-wrap">
+            <label for="turf-custom-suburb-input" class="turf-custom-label">
+              <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-accent);">travel_explore</span>
+              <span>Test Your Specific Primary Suburb:</span>
+            </label>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <input type="text" id="turf-custom-suburb-input" class="turf-custom-input" placeholder="e.g. Cronulla, Essendon, Chermside, Joondalup..." />
+              <button type="button" id="turf-custom-suburb-btn" class="btn-fast-action" style="background: var(--color-accent); color: #1C1A17; font-weight: 700;">
+                <span>Scan Turf Radius</span>
+                <span class="material-symbols-outlined" style="font-size: 16px;">search</span>
+              </button>
+            </div>
+            <div id="turf-custom-feedback" style="display: none; margin-top: 10px;"></div>
+          </div>
+        </div>
+
+        <!-- Right: Metrics & Live Google Snippet Simulation -->
+        <div class="turf-right-col">
+          <div class="turf-metrics-grid">
+            <div class="turf-metric-card">
+              <span class="turf-metric-label">High-Intent Searches</span>
+              <span id="turf-monthly-searches" class="turf-metric-value">3,850 /mo</span>
+              <span class="turf-metric-sub">Local electrical searches</span>
+            </div>
+            <div class="turf-metric-card">
+              <span class="turf-metric-label">Avg Direct Ticket</span>
+              <span id="turf-avg-job-value" class="turf-metric-value">$1,350 AUD</span>
+              <span class="turf-metric-sub">Direct homeowner enquiries</span>
+            </div>
+          </div>
+
+          <!-- Highlight Annual Opportunity Bar -->
+          <div class="turf-opportunity-banner">
+            <div>
+              <span style="font-family: var(--font-ui); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; color: var(--text-dim); letter-spacing: 0.08em; display: block;">
+                Annual Private Value (Zero Lead Fees)
+              </span>
+              <span id="turf-annual-opportunity" style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: #34d399; display: block; margin-top: 4px;">
+                +$46,200 AUD/yr
+              </span>
+            </div>
+            <span class="material-symbols-outlined" style="font-size: 28px; color: #34d399; opacity: 0.8;">trending_up</span>
+          </div>
+
+          <!-- Live Google Search Result Snippet Simulation -->
+          <div class="turf-snippet-box">
+            <div style="font-family: var(--font-ui); font-size: 0.6875rem; color: var(--text-dim); margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+              <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-accent);">preview</span>
+              <span>Simulated Google Local Search Result:</span>
+            </div>
+            <div style="font-family: var(--font-ui); font-size: 0.6875rem; color: #34d399;">
+              https://yourcontractorname.com.au &gt; local-services
+            </div>
+            <h4 id="turf-snippet-title" style="font-family: var(--font-display); font-size: 0.9375rem; font-weight: 700; color: #60a5fa; margin: 4px 0 6px;">
+              Apex Electrical Sydney • 24/7 Emergency Electrician Inner West &amp; Bondi
+            </h4>
+            <p style="font-family: var(--font-body); font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+              Licensed REC #38291. Master Electrician. 25-minute rapid emergency power restorations, switchboard replacements &amp; EV charger installations across Sydney Inner West. Call now.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: HOW IT WORKS (CONNECTED HORIZONTAL TIMELINE — ZERO BOX CARDS) -->
+    <section id="how-it-works" class="how-it-works-section site-wrapper">
+      <div class="section-header">
+        <span class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 15px;">route</span>
+          <span>Simple 4-Step Process</span>
+        </span>
+        <h2 class="section-title">How It Works From Brief to Launch</h2>
+        <p class="section-subtitle">
+          Designed specifically for contractors on job sites. Zero tedious meetings or technical jargon.
+        </p>
+      </div>
+
+      <div class="process-timeline-flow">
+        <!-- Step 1 -->
+        <div class="process-milestone-node">
+          <div class="milestone-badge">01</div>
+          <h3 class="milestone-title">15-Minute Brief</h3>
+          <p class="milestone-desc">
+            Complete a simple online form or quick phone call with your electrical licence number, service suburbs, primary specialties, and preferred phone number.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-milestone-node">
+          <div class="milestone-badge">02</div>
+          <h3 class="milestone-title">Custom Design &amp; Build</h3>
+          <p class="milestone-desc">
+            We design and code your trade website from the ground up, optimizing for fast mobile loading, prominent call buttons, and local suburb keywords.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-milestone-node">
+          <div class="milestone-badge">03</div>
+          <h3 class="milestone-title">Mobile Staging Review</h3>
+          <p class="milestone-desc">
+            We send a private staging link directly to your smartphone. Check your photos, test the dialer buttons, review the trade copy, and request adjustments.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-milestone-node">
+          <div class="milestone-badge">04</div>
+          <h3 class="milestone-title">Domain Setup &amp; Launch</h3>
+          <p class="milestone-desc">
+            We connect the website to your .com.au domain with SSL security. You receive 100% full code ownership with zero monthly lock-in contracts.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FREQUENTLY ASKED QUESTIONS (CLEAN EDITORIAL ACCORDION — ZERO BOXES) -->
+    <section id="faq" class="faq-section site-wrapper">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 15px;">help</span>
+          <span>Common Trade Questions</span>
+        </span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Straightforward answers so you can make the right decision for your electrical business.
+        </p>
+      </div>
+
+      <div class="faq-editorial-container">
+        <!-- FAQ 1 -->
+        <div class="faq-editorial-item">
+          <button type="button" class="faq-editorial-trigger" aria-expanded="false">
+            <span class="faq-editorial-question">How does the 7 to 14 day delivery timeline work?</span>
+            <span class="material-symbols-outlined faq-icon-toggle">expand_more</span>
+          </button>
+          <div class="faq-editorial-panel">
+            <div class="faq-editorial-content">
+              As soon as you complete our streamlined 15-minute intake brief, your project enters our design and build sprint immediately. Starter packages are delivered within 7 days; Full Sites take 7 to 14 days. We keep you updated at key milestones without interrupting your work on the tools.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-editorial-item">
+          <button type="button" class="faq-editorial-trigger" aria-expanded="false">
+            <span class="faq-editorial-question">Are there any hidden monthly retainers or ongoing fees?</span>
+            <span class="material-symbols-outlined faq-icon-toggle">expand_more</span>
+          </button>
+          <div class="faq-editorial-panel">
+            <div class="faq-editorial-content">
+              None. Our prices are strictly one-off fixed fees ($490 AUD for Starter, $890 AUD for Full Site). Once your website is deployed and approved, you owe us nothing. You are not locked into proprietary website builders that charge $300 a month to keep your site online.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-editorial-item">
+          <button type="button" class="faq-editorial-trigger" aria-expanded="false">
+            <span class="faq-editorial-question">Who actually owns the website and code after launch?</span>
+            <span class="material-symbols-outlined faq-icon-toggle">expand_more</span>
+          </button>
+          <div class="faq-editorial-panel">
+            <div class="faq-editorial-content">
+              You do — 100%. Once final payment is made, you own every file, stylesheet, script, and image. We never hold your code hostage or charge exit fees, and you can move hosts anytime you like.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-editorial-item">
+          <button type="button" class="faq-editorial-trigger" aria-expanded="false">
+            <span class="faq-editorial-question">Why shouldn't I just keep buying shared leads on HiPages or Airtasker?</span>
+            <span class="material-symbols-outlined faq-icon-toggle">expand_more</span>
+          </button>
+          <div class="faq-editorial-panel">
+            <div class="faq-editorial-content">
+              Lead platforms charge you $40 to $90 every time someone posts a job, even if 4 other electricians quote and you win nothing. You are paying to rent access to someone else's platform while racing to the bottom on price. With your own dedicated website, you capture direct inbound phone calls from local homeowners and builders who want to hire you specifically, building an asset you own forever.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-editorial-item">
+          <button type="button" class="faq-editorial-trigger" aria-expanded="false">
+            <span class="faq-editorial-question">Do you ensure our REC licence and Australian trade credentials are properly formatted?</span>
+            <span class="material-symbols-outlined faq-icon-toggle">expand_more</span>
+          </button>
+          <div class="faq-editorial-panel">
+            <div class="faq-editorial-content">
+              Yes, 100%. We understand Australian state trade licensing laws (REC in Victoria, Electrical Contractor Licence in NSW, Queensland Electrical Contractor Licences, etc.). We prominently integrate your licence number, Master Electricians / NECA affiliations, and AS/NZS 3000 compliance markers directly into the header, footer, and quote forms so prospective customers know you are a verified professional.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-editorial-item">
+          <button type="button" class="faq-editorial-trigger" aria-expanded="false">
+            <span class="faq-editorial-question">What do I need to provide to get started?</span>
+            <span class="material-symbols-outlined faq-icon-toggle">expand_more</span>
+          </button>
+          <div class="faq-editorial-panel">
+            <div class="faq-editorial-content">
+              Just 15 minutes of your time. We ask for your business name, electrical licence number (e.g. REC or Contractor Licence), primary service suburbs, the services you want to push (switchboards, solar, EV chargers, general domestic/commercial), and your preferred phone number. We handle drafting the trade copy and organizing the layout.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FINAL CTA (OPEN EDITORIAL BANNER — ZERO BOXES) -->
+    <section id="final-cta" class="final-cta-section site-wrapper">
+      <div class="final-cta-open">
+        <div class="final-cta-content">
+          <span class="section-eyebrow">
+            <span class="material-symbols-outlined" style="font-size: 15px;">send</span>
+            <span>Get Started</span>
+          </span>
+          <h2 class="final-cta-title">
+            Ready to Win More Electrical Enquiries?
+          </h2>
+          <p class="final-cta-desc">
+            Lock in your build spot today. Transparent fixed trade pricing, 7 to 14 day delivery, and a 100% free, no-obligation quote.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px; margin-top: 8px;">
+            <a href="contact.html" class="btn-primary" style="height: 50px; padding: 0 32px;">
+              <span>Get a Free Quote</span>
+              <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+            </a>
+            <a href="services.html" class="btn-ghost" style="height: 50px; padding: 0 26px;">
+              <span>Compare Packages</span>
+              <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL QUALITY / SPEED / FIXED PRICE STRIP (OPEN UNBOXED BANNER) -->
+    <aside class="qsp-global-strip" aria-label="Nexbeck Core Value Pillars">
+      <div class="site-wrapper">
+        <div class="qsp-open-grid">
+          <div class="qsp-open-col">
+            <span class="material-symbols-outlined qsp-open-icon">phonelink</span>
+            <div>
+              <h4>Trade-Specific Design</h4>
+              <p>Mobile-first speed, one-tap emergency calling, and REC licence credentials.</p>
+            </div>
+          </div>
+
+          <div class="qsp-open-col">
+            <span class="material-symbols-outlined qsp-open-icon">schedule</span>
+            <div>
+              <h4>7 to 14 Day Delivery</h4>
+              <p>Live on your .com.au domain in 1 to 2 weeks flat. No drawn-out meetings.</p>
+            </div>
+          </div>
+
+          <div class="qsp-open-col">
+            <span class="material-symbols-outlined qsp-open-icon">payments</span>
+            <div>
+              <h4>Fixed Trade Price</h4>
+              <p>Transparent rates ($490–$890), 100% code ownership, and zero monthly retainers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- ========================================================================
+       SHARED SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="site-wrapper">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <a href="index.html" class="brand-link">
+            <img src="images/logo.png" alt="Nexbeck" class="brand-logo-img" />
+            <span class="brand-text">NEXBECK</span>
+          </a>
+          <p style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; max-width: 300px;">
+            Web design agency engineered for Australian electricians and trade businesses to win more enquiries, get found locally, and scale online.
+          </p>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width: 7px; height: 7px; border-radius: 50%; background: #34d399;"></span>
+            <span style="font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">AUSTRALIA-WIDE SERVICE</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <span class="footer-col-title">Navigation</span>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="services.html" class="footer-link">Services &amp; Pricing</a></li>
+            <li><a href="about.html" class="footer-link">About Nexbeck</a></li>
+            <li><a href="contact.html" class="footer-link">Get a Free Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Trade Packages -->
+        <div>
+          <span class="footer-col-title">Trade Packages</span>
+          <ul class="footer-links-list">
+            <li><a href="services.html" class="footer-link">Starter Package ($490 AUD)</a></li>
+            <li><a href="services.html" class="footer-link">Full Site Package ($890 AUD)</a></li>
+            <li><a href="services.html#included-features" class="footer-link">Full Inclusions List</a></li>
+            <li><a href="contact.html" class="footer-link">Custom Trade Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Direct Contact -->
+        <div>
+          <span class="footer-col-title">Direct Contact</span>
+          <ul class="footer-links-list">
+            <li style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted);">
+              Email: contact@nexbeck.com.au
+            </li>
+            <li style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted);">
+              Trade Line: +61 400 123 456
+            </li>
+            <li style="font-family: var(--font-body); font-size: 0.8125rem; color: var(--text-dim); margin-top: 4px;">
+              Hours: Mon–Fri, 8:00 AM – 6:00 PM AEST
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p style="font-family: var(--font-body); font-size: 0.8125rem; color: var(--text-dim);">
+          &copy; 2026 Nexbeck. All rights reserved. Websites engineered for Australian trade contractors.
+        </p>
+        <p style="font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-dim); letter-spacing: 0.04em;">
+          QUALITY • SPEED (7–14 DAYS) • FIXED PRICE
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back To Top Button -->
+  <button type="button" id="back-to-top-btn" class="back-to-top-btn" aria-label="Scroll back to top">
+    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_upward</span>
+  </button>
+
+  <!-- Sticky Mobile Action Bar -->
+  <aside id="mobile-action-bar" class="mobile-action-bar" aria-label="Quick Mobile Actions">
+    <div class="mobile-action-container">
+      <a href="tel:+61400123456" class="btn-ghost" style="flex: 1; height: 42px; font-size: 11px; padding: 0 12px;">
+        <span class="material-symbols-outlined" style="font-size: 16px; color: #34d399;">call</span>
+        <span>Call Directly</span>
+      </a>
+      <a href="contact.html" class="btn-primary" style="flex: 1; height: 42px; font-size: 11px; padding: 0 12px;">
+        <span>Get a Free Quote</span>
+        <span class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- JavaScript -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

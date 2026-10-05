@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Document Metadata & Viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Free Quote — Nexbeck Trade Web Design</title>
+  <meta name="description" content="Request a 100% free no-obligation quote for your Australian electrical or trade business. Fast 24-hour reply, guaranteed 7-14 day delivery, fixed pricing." />
+  <meta property="og:title" content="Contact &amp; Free Quote — Nexbeck Trade Web Design" />
+  <meta property="og:description" content="Request a 100% free no-obligation quote for your Australian electrical or trade business. Fast 24-hour reply, guaranteed 7-14 day delivery, fixed pricing." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Shared Global Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Subtle Ambient Background -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-radial-glow"></div>
+
+  <!-- ========================================================================
+       SHARED FIXED HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="main-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Nexbeck Home">
+        <img src="images/logo.png" alt="Nexbeck" class="brand-logo-img" />
+        <span class="brand-text">NEXBECK</span>
+      </a>
+
+      <nav class="desktop-nav" id="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#quote-form-section" class="btn-primary desktop-only-btn">
+          <span>Get a Free Quote</span>
+          <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+        </a>
+
+        <button type="button" id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open mobile navigation menu">
+          <span class="material-symbols-outlined" id="mobile-menu-icon" style="font-size: 22px;">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">
+          <span>Home</span>
+        </a>
+        <a href="services.html" class="mobile-nav-link">
+          <span>Services</span>
+        </a>
+        <a href="about.html" class="mobile-nav-link">
+          <span>About</span>
+        </a>
+        <a href="contact.html" class="mobile-nav-link active">
+          <span>Contact</span>
+        </a>
+        <div style="padding-top: 12px;">
+          <a href="#quote-form-section" class="btn-primary" style="width: 100%; height: 44px;">
+            <span>Get a Free Quote</span>
+            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTACT CONTENT
+       ======================================================================== -->
+  <main style="padding-top: 76px; position: relative;">
+
+    <!-- SECTION 1: CONTACT HERO -->
+    <section class="page-hero-section site-wrapper">
+      <div class="page-hero-container">
+        <div class="hero-kicker">
+          <span class="hero-kicker-dot"></span>
+          <span>100% Free &amp; No-Obligation</span>
+        </div>
+
+        <h1 class="page-hero-title">
+          Get a Free Trade Website Quote
+        </h1>
+
+        <p class="page-hero-subtitle">
+          Tell us about your electrical or trade contracting business. We review your details and reply within 24 business hours with guaranteed fixed pricing, delivery timelines, and zero sales pressure.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 6px;">
+          <a href="#quote-form-section" class="btn-primary" style="height: 48px; padding: 0 26px;">
+            <span>Fill Out The Form Below</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+          </a>
+          <a href="tel:+61400123456" class="btn-ghost" style="height: 48px; padding: 0 22px;">
+            <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-success);">call</span>
+            <span>Call Trade Line</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CONTACT FORM & WHAT HAPPENS NEXT -->
+    <section id="quote-form-section" class="site-wrapper" style="padding-bottom: clamp(48px, 7vh, 88px);">
+      <div class="contact-layout-grid">
+        <!-- Left: Form -->
+        <div class="contact-card-box">
+          <!-- Tradie Fast-Lane Quick Contact -->
+          <div class="tradie-fast-lane">
+            <div class="fast-lane-title">
+              <span class="material-symbols-outlined" style="color: var(--color-accent); font-size: 20px;">bolt</span>
+              <span>On-Site or In The Van Right Now?</span>
+            </div>
+            <p style="font-family: var(--font-body); font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5;">
+              Skip the form if you prefer. Call or text us directly with your business name and suburb for an instant 5-minute fixed quote:
+            </p>
+            <div class="fast-lane-buttons">
+              <a href="tel:+61400123456" class="btn-fast-action btn-fast-call">
+                <span class="material-symbols-outlined" style="font-size: 16px;">call</span>
+                <span>Call 0400 123 456</span>
+              </a>
+              <a href="sms:+61400123456?body=G%27day%20Nexbeck%2C%20I%27m%20looking%20for%20a%20website%20quote%20for%20my%20electrical%20business." class="btn-fast-action btn-fast-sms">
+                <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-accent);">sms</span>
+                <span>Text Us (SMS)</span>
+              </a>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 22px;">
+            <span class="section-eyebrow">
+              <span class="material-symbols-outlined" style="font-size: 15px;">edit_note</span>
+              <span>Project Intake</span>
+            </span>
+            <h2 style="font-family: var(--font-display); font-size: clamp(1.25rem, 2vw, 1.625rem); font-weight: 800; color: var(--text-main);">
+              Request Your Free Quote Online
+            </h2>
+            <p style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted); margin-top: 4px;">
+              Takes less than 2 minutes. Fixed Australian trade rates with zero obligation.
+            </p>
+          </div>
+
+          <form id="trade-quote-form" action="#" method="POST">
+            <!-- Full Name -->
+            <div class="form-group-wrap">
+              <label for="client-name" class="form-label-txt">
+                <span>Your Name</span>
+                <span style="color: var(--color-accent);">*</span>
+              </label>
+              <input type="text" id="client-name" name="name" class="form-field-input" placeholder="e.g. Jack Harrison" required />
+            </div>
+
+            <!-- Business Name -->
+            <div class="form-group-wrap">
+              <label for="business-name" class="form-label-txt">
+                <span>Business Name (or Sole Trader)</span>
+                <span style="color: var(--color-accent);">*</span>
+              </label>
+              <input type="text" id="business-name" name="business_name" class="form-field-input" placeholder="e.g. Harrison Electrical &amp; Solar" required />
+            </div>
+
+            <!-- Trade Licence / REC -->
+            <div class="form-group-wrap">
+              <label for="client-licence" class="form-label-txt">
+                <span>Electrical Licence / REC Number &amp; State</span>
+                <span style="color: var(--text-dim); font-size: 10px; font-weight: normal;">(Optional for badge preview)</span>
+              </label>
+              <input type="text" id="client-licence" name="licence" class="form-field-input" placeholder="e.g. REC #38291 (VIC) or Lic #394827C (NSW)" />
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group-wrap">
+              <label for="client-email" class="form-label-txt">
+                <span>Email Address</span>
+                <span style="color: var(--color-accent);">*</span>
+              </label>
+              <input type="email" id="client-email" name="email" class="form-field-input" placeholder="e.g. jack@harrisonelectrical.com.au" required />
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group-wrap">
+              <label for="client-phone" class="form-label-txt">
+                <span>Mobile Phone Number</span>
+                <span style="color: var(--color-accent);">*</span>
+              </label>
+              <input type="tel" id="client-phone" name="phone" class="form-field-input" placeholder="e.g. 0400 123 456" required />
+            </div>
+
+            <!-- Package Selection -->
+            <div class="form-group-wrap">
+              <label for="package-select" class="form-label-txt">
+                <span>Select Package</span>
+                <span style="color: var(--color-accent);">*</span>
+              </label>
+              <select id="package-select" name="package" class="form-field-select" required>
+                <option value="full" selected>Full Site Package (5 Pages • $890 AUD • 7 to 14 Days) — Recommended</option>
+                <option value="starter">Starter Package (1 Page • $490 AUD • Within 7 Days)</option>
+                <option value="custom">Custom Trade Project / Other Trade Contractor</option>
+              </select>
+            </div>
+
+            <!-- Suburbs & Services Notes -->
+            <div class="form-group-wrap">
+              <label for="project-notes" class="form-label-txt">
+                <span>Primary Suburbs &amp; Services You Want to Promote</span>
+                <span style="color: var(--text-dim); font-size: 10px; font-weight: normal;">(Optional)</span>
+              </label>
+              <textarea id="project-notes" name="notes" rows="3" class="form-field-textarea" placeholder="e.g. Servicing Sydney Inner West. Want more switchboard upgrades, EV wallbox installations, and commercial safety checks."></textarea>
+            </div>
+
+            <!-- Reassurance Note -->
+            <div class="reassurance-strip-box">
+              <span class="material-symbols-outlined shield-icon">verified_user</span>
+              <span>
+                <strong>100% No-Obligation Quote:</strong> We respect your time. Zero aggressive sales pitches, zero hidden costs, and honest fixed trade rates.
+              </span>
+            </div>
+
+            <!-- Submit Button -->
+            <div style="margin-top: 22px;">
+              <button type="submit" id="quote-submit-btn" class="btn-primary" style="width: 100%; height: 48px; font-size: 0.875rem;">
+                <span>Get a Free Quote</span>
+                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Success Feedback -->
+          <div id="quote-success-card" class="success-card-feedback">
+            <div class="success-check-icon">
+              <span class="material-symbols-outlined">check</span>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.375rem; font-weight: 800; color: var(--text-main);">
+              Quote Request Received!
+            </h3>
+            <p style="font-family: var(--font-body); font-size: 0.9375rem; color: var(--text-muted); line-height: 1.6; max-width: 440px;">
+              Thank you, <strong id="success-client-name" style="color: var(--text-main);"></strong>. We've received your request for the <strong id="success-package-name" style="color: var(--color-accent);"></strong>.
+            </p>
+            <div style="padding: 10px 18px; border-radius: var(--radius-sm); background: var(--bg-surface-elevated); border: 1px solid var(--border-card); font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-main);">
+              <span style="color: var(--color-success); font-weight: 700;">RESPONSE TIME:</span> We will review your service areas and email your proposal within 24 business hours.
+            </div>
+            <button type="button" id="reset-quote-btn" class="btn-ghost" style="height: 40px; padding: 0 18px; font-size: 0.75rem; margin-top: 6px;">
+              <span>Submit Another Inquiry</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: What Happens Next & Direct Contact Info -->
+        <div style="display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px);">
+          <!-- What Happens Next -->
+          <div>
+            <span class="section-eyebrow">
+              <span class="material-symbols-outlined" style="font-size: 15px;">timeline</span>
+              <span>Next Steps</span>
+            </span>
+            <h2 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 16px;">
+              What Happens Next
+            </h2>
+
+            <div class="what-next-container">
+              <div class="what-next-step">
+                <div class="what-next-num">01</div>
+                <div>
+                  <h3 style="font-family: var(--font-display); font-size: 0.9375rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px;">
+                    Review Within 24 Business Hours
+                  </h3>
+                  <p style="font-family: var(--font-body); font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5;">
+                    We analyze your service suburbs, primary trade offerings, and package selection to confirm project scope.
+                  </p>
+                </div>
+              </div>
+
+              <div class="what-next-step">
+                <div class="what-next-num">02</div>
+                <div>
+                  <h3 style="font-family: var(--font-display); font-size: 0.9375rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px;">
+                    Fixed Trade Scope &amp; Simple Brief
+                  </h3>
+                  <p style="font-family: var(--font-body); font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5;">
+                    We send over a clear proposal with guaranteed pricing ($490 or $890 AUD) and a quick 15-minute brief link.
+                  </p>
+                </div>
+              </div>
+
+              <div class="what-next-step">
+                <div class="what-next-num">03</div>
+                <div>
+                  <h3 style="font-family: var(--font-display); font-size: 0.9375rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px;">
+                    Fast 7 to 14 Day Sprint
+                  </h3>
+                  <p style="font-family: var(--font-body); font-size: 0.8125rem; color: var(--text-muted); line-height: 1.5;">
+                    Your build enters our queue immediately. Staging link ready for mobile review in 1 to 2 weeks flat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Contact -->
+          <div>
+            <span class="section-eyebrow">
+              <span class="material-symbols-outlined" style="font-size: 15px;">contact_phone</span>
+              <span>Direct Assistance</span>
+            </span>
+            <h2 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 16px;">
+              Direct Trade Contact
+            </h2>
+
+            <div class="contact-info-list">
+              <a href="mailto:contact@nexbeck.com.au" class="contact-info-item">
+                <span class="material-symbols-outlined" style="color: var(--color-accent); font-size: 20px;">mail</span>
+                <div>
+                  <span style="display: block; font-family: var(--font-ui); font-size: 0.625rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700;">Direct Email</span>
+                  <span style="font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; color: var(--text-main);">contact@nexbeck.com.au</span>
+                </div>
+              </a>
+
+              <a href="tel:+61400123456" class="contact-info-item">
+                <span class="material-symbols-outlined" style="color: var(--color-success); font-size: 20px;">call</span>
+                <div>
+                  <span style="display: block; font-family: var(--font-ui); font-size: 0.625rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700;">Trade Phone Line</span>
+                  <span style="font-family: var(--font-body); font-size: 0.875rem; font-weight: 600; color: var(--text-main);">+61 400 123 456</span>
+                </div>
+              </a>
+
+              <div class="contact-info-item">
+                <span class="material-symbols-outlined" style="color: var(--color-accent); font-size: 20px;">schedule</span>
+                <div>
+                  <span style="display: block; font-family: var(--font-ui); font-size: 0.625rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700;">Working Hours</span>
+                  <span style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-main);">Monday – Friday, 8:00 AM – 6:00 PM AEST</span>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <span class="material-symbols-outlined" style="color: var(--color-accent); font-size: 20px;">public</span>
+                <div>
+                  <span style="display: block; font-family: var(--font-ui); font-size: 0.625rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700;">Coverage</span>
+                  <span style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-main);">Australia-wide: NSW, VIC, QLD, WA, SA, TAS, ACT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: QUICK CONTACT FAQS -->
+    <section class="faq-section site-wrapper">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 15px;">help</span>
+          <span>Quick Answers</span>
+        </span>
+        <h2 class="section-title">Common Questions Before Submitting</h2>
+        <p class="section-subtitle">
+          Everything you need to know about getting your quote.
+        </p>
+      </div>
+
+      <div class="faq-editorial-container">
+        <div class="faq-editorial-item">
+          <button type="button" class="faq-editorial-trigger" aria-expanded="false">
+            <span class="faq-editorial-question">How quickly will I receive my quote?</span>
+            <span class="material-symbols-outlined faq-icon-toggle">expand_more</span>
+          </button>
+          <div class="faq-editorial-panel">
+            <div class="faq-editorial-content">
+              We review every inquiry within 24 business hours. You'll receive a clear email confirming the package scope, fixed trade pricing, and our next available sprint start date.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-editorial-item">
+          <button type="button" class="faq-editorial-trigger" aria-expanded="false">
+            <span class="faq-editorial-question">Is there any obligation when requesting a quote?</span>
+            <span class="material-symbols-outlined faq-icon-toggle">expand_more</span>
+          </button>
+          <div class="faq-editorial-panel">
+            <div class="faq-editorial-content">
+              None whatsoever. All quotes are 100% free and strictly no-obligation. We will never hound you with pushy sales calls.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-editorial-item">
+          <button type="button" class="faq-editorial-trigger" aria-expanded="false">
+            <span class="faq-editorial-question">What if I already have a domain name registered?</span>
+            <span class="material-symbols-outlined faq-icon-toggle">expand_more</span>
+          </button>
+          <div class="faq-editorial-panel">
+            <div class="faq-editorial-content">
+              If you already own your .com.au domain, we connect your new website to it at no extra cost. If you don't have one yet, we'll guide you on how to register one directly in your name so you retain total ownership.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL STRIP (OPEN UNBOXED BANNER) -->
+    <aside class="qsp-global-strip" aria-label="Nexbeck Core Value Pillars">
+      <div class="site-wrapper">
+        <div class="qsp-open-grid">
+          <div class="qsp-open-col">
+            <span class="material-symbols-outlined qsp-open-icon">phonelink</span>
+            <div>
+              <h4>Trade-Specific Design</h4>
+              <p>Mobile-first speeds, one-tap emergency calling, and REC licence credentials.</p>
+            </div>
+          </div>
+
+          <div class="qsp-open-col">
+            <span class="material-symbols-outlined qsp-open-icon">schedule</span>
+            <div>
+              <h4>7 to 14 Day Delivery</h4>
+              <p>Live on your .com.au domain in 1 to 2 weeks flat. No drawn-out meetings.</p>
+            </div>
+          </div>
+
+          <div class="qsp-open-col">
+            <span class="material-symbols-outlined qsp-open-icon">payments</span>
+            <div>
+              <h4>Fixed Trade Price</h4>
+              <p>Transparent rates ($490–$890), 100% code ownership, and zero monthly retainers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- ========================================================================
+       SHARED SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="site-wrapper">
+      <div class="footer-grid">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <a href="index.html" class="brand-link">
+            <img src="images/logo.png" alt="Nexbeck" class="brand-logo-img" />
+            <span class="brand-text">NEXBECK</span>
+          </a>
+          <p style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; max-width: 300px;">
+            Web design agency engineered for Australian electricians and trade businesses to win more enquiries, get found locally, and scale online.
+          </p>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width: 7px; height: 7px; border-radius: 50%; background: #34d399;"></span>
+            <span style="font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">AUSTRALIA-WIDE SERVICE</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="footer-col-title">Navigation</span>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="services.html" class="footer-link">Services &amp; Pricing</a></li>
+            <li><a href="about.html" class="footer-link">About Nexbeck</a></li>
+            <li><a href="contact.html" class="footer-link">Get a Free Quote</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="footer-col-title">Trade Packages</span>
+          <ul class="footer-links-list">
+            <li><a href="services.html" class="footer-link">Starter Package ($490 AUD)</a></li>
+            <li><a href="services.html" class="footer-link">Full Site Package ($890 AUD)</a></li>
+            <li><a href="services.html#included-features" class="footer-link">Full Inclusions List</a></li>
+            <li><a href="contact.html" class="footer-link">Custom Trade Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="footer-col-title">Direct Contact</span>
+          <ul class="footer-links-list">
+            <li style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted);">
+              Email: contact@nexbeck.com.au
+            </li>
+            <li style="font-family: var(--font-body); font-size: 0.875rem; color: var(--text-muted);">
+              Trade Line: +61 400 123 456
+            </li>
+            <li style="font-family: var(--font-body); font-size: 0.8125rem; color: var(--text-dim); margin-top: 4px;">
+              Hours: Mon–Fri, 8:00 AM – 6:00 PM AEST
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p style="font-family: var(--font-body); font-size: 0.8125rem; color: var(--text-dim);">
+          &copy; 2026 Nexbeck. All rights reserved. Websites engineered for Australian trade contractors.
+        </p>
+        <p style="font-family: var(--font-ui); font-size: 0.75rem; color: var(--text-dim); letter-spacing: 0.04em;">
+          QUALITY • SPEED (7–14 DAYS) • FIXED PRICE
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="back-to-top-btn" class="back-to-top-btn" aria-label="Scroll back to top">
+    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_upward</span>
+  </button>
+
+  <aside id="mobile-action-bar" class="mobile-action-bar" aria-label="Quick Mobile Actions">
+    <div class="mobile-action-container">
+      <a href="tel:+61400123456" class="btn-ghost" style="flex: 1; height: 42px; font-size: 11px; padding: 0 12px;">
+        <span class="material-symbols-outlined" style="font-size: 16px; color: #34d399;">call</span>
+        <span>Call Directly</span>
+      </a>
+      <a href="#quote-form-section" class="btn-primary" style="flex: 1; height: 42px; font-size: 11px; padding: 0 12px;">
+        <span>Get a Free Quote</span>
+        <span class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span>
+      </a>
+    </div>
+  </aside>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
