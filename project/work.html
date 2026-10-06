@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Document Metadata & Viewport -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Work &amp; Trade Website Showcase — Nexbeck</title>
+  <meta name="description" content="Explore live website examples and demo projects built specifically for Australian electricians and trade contractors by Nexbeck." />
+  <meta property="og:title" content="Our Work &amp; Trade Website Showcase — Nexbeck" />
+  <meta property="og:description" content="Explore live website examples and demo projects built specifically for Australian electricians and trade contractors by Nexbeck." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Shared Global Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nexbeck Web Design",
+    "description": "Professional websites designed and built for Australian electricians and trade contractors.",
+    "priceRange": "$$ - From Under $1,000 to $2,300 AUD",
+    "areaServed": "Australia",
+    "serviceType": "Web Design for Electricians and Trade Businesses"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Subtle Ambient Background -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-radial-glow"></div>
+
+  <!-- ========================================================================
+       SHARED FIXED HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="main-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Nexbeck Home">
+        <img src="images/logo.png" alt="Nexbeck" class="brand-logo-img" />
+        <span class="brand-text">NEXBECK</span>
+      </a>
+
+      <nav class="desktop-nav" id="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="work.html" class="nav-link active">Our Work</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact.html" class="btn-primary desktop-only-btn">
+          <span>Get a Free Quote</span>
+          <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+        </a>
+
+        <button type="button" id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open mobile navigation menu">
+          <span class="material-symbols-outlined" id="mobile-menu-icon" style="font-size: 22px;">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">
+          <span>Home</span>
+        </a>
+        <a href="services.html" class="mobile-nav-link">
+          <span>Services</span>
+        </a>
+        <a href="about.html" class="mobile-nav-link">
+          <span>About</span>
+        </a>
+        <a href="work.html" class="mobile-nav-link active">
+          <span>Our Work</span>
+        </a>
+        <a href="contact.html" class="mobile-nav-link">
+          <span>Contact</span>
+        </a>
+        <div style="padding-top: 12px;">
+          <a href="contact.html" class="btn-primary" style="width: 100%; height: 44px;">
+            <span>Get a Free Quote</span>
+            <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN WORK CONTENT
+       ======================================================================== -->
+  <main style="padding-top: 76px; position: relative;">
+
+    <!-- SECTION 1: HERO -->
+    <section class="page-hero-section site-wrapper">
+      <div class="page-hero-container">
+        <div class="hero-kicker">
+          <span class="hero-kicker-dot"></span>
+          <span>Proven Trade Architecture</span>
+        </div>
+
+        <h1 class="page-hero-title">
+          Websites Built to Convert for Australian Electricians
+        </h1>
+
+        <p class="page-hero-subtitle">
+          See how our trade websites look, feel, and function on real devices. Every project is built from scratch with mobile-first speed, tap-to-call dialers, verified trade credentials, and local suburb optimization.
+        </p>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 6px;">
+          <a href="#featured-project" class="btn-primary" style="height: 48px; padding: 0 26px;">
+            <span>Explore Live Demo</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
+          </a>
+          <a href="contact.html" class="btn-ghost" style="height: 48px; padding: 0 24px;">
+            <span>Start Your Build</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FEATURED LIVE SHOWCASE (2-Column Layout) -->
+    <section id="featured-project" class="project-showcase-section" style="border-top: 1px solid var(--border-subtle);">
+      <div class="site-wrapper">
+        <div class="showcase-split-grid">
+          <!-- Left Column: Copy & CTAs -->
+          <div class="showcase-copy-col">
+            <span class="section-eyebrow" style="margin-bottom: 12px;">
+              <span class="material-symbols-outlined" style="font-size: 15px;">devices</span>
+              <span>Interactive Live Build</span>
+            </span>
+
+            <h2 class="showcase-title">Rexora Electricians — Live Production Site</h2>
+
+            <p class="showcase-desc">
+              An example trade contractor website engineered for rapid emergency callout response, high-margin switchboard upgrades, and local Brisbane suburban coverage.
+            </p>
+
+            <!-- Desktop | Mobile Toggle Bar -->
+            <div class="showcase-device-toggle-bar">
+              <button type="button" class="showcase-toggle-btn active" data-showcase-view="desktop">
+                <span class="material-symbols-outlined" style="font-size: 16px;">laptop_mac</span>
+                <span>Desktop View</span>
+              </button>
+              <button type="button" class="showcase-toggle-btn" data-showcase-view="mobile">
+                <span class="material-symbols-outlined" style="font-size: 16px;">smartphone</span>
+                <span>Mobile View</span>
+              </button>
+            </div>
+
+            <!-- Inclusions -->
+            <ul style="list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-direction: column; gap: 10px;">
+              <li style="display: flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 0.875rem; color: var(--text-main);">
+                <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-success); flex-shrink: 0;">check_circle</span>
+                <span><strong>Live production deployment:</strong> Real contractor website</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 0.875rem; color: var(--text-main);">
+                <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-success); flex-shrink: 0;">check_circle</span>
+                <span><strong>Brisbane regional hubs:</strong> North, South, East, West &amp; CBD</span>
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 0.875rem; color: var(--text-main);">
+                <span class="material-symbols-outlined" style="font-size: 18px; color: var(--color-success); flex-shrink: 0;">check_circle</span>
+                <span><strong>Instant emergency dialer:</strong> Fast mobile conversion</span>
+              </li>
+            </ul>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px;">
+              <a href="https://rexoraelectricians.nexbeck.com/" target="_blank" rel="noopener" class="btn-primary" style="height: 48px; padding: 0 26px;">
+                <span>Open in New Tab</span>
+                <span class="material-symbols-outlined" style="font-size: 18px;">open_in_new</span>
+              </a>
+              <a href="contact.html" class="btn-ghost" style="height: 48px; padding: 0 22px;">
+                <span>Get a Free Quote</span>
+                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Device Frame -->
+          <div class="showcase-frame-col">
+            <!-- Compact Laptop Frame (Desktop View) -->
+            <div class="laptop-frame" id="showcase-laptop-view">
+              <div class="laptop-top-lid">
+                <div class="laptop-camera-notch"></div>
+                <div class="laptop-screen-display">
+                  <div class="laptop-scaler">
+                    <iframe src="https://rexoraelectricians.nexbeck.com/" title="Rexora Electricians Live Website - Desktop" loading="lazy"></iframe>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop-base-bottom"></div>
+            </div>
+
+            <!-- Authentic iPhone Pro Frame (Mobile View) -->
+            <div class="iphone-pro-frame" id="showcase-phone-view" style="display: none;">
+              <span class="iphone-btn iphone-btn-action"></span>
+              <span class="iphone-btn iphone-btn-volup"></span>
+              <span class="iphone-btn iphone-btn-voldown"></span>
+              <span class="iphone-btn iphone-btn-power"></span>
+
+              <div class="iphone-screen-chassis">
+                <div class="iphone-status-bar">
+                  <div class="iphone-time">7:12 PM</div>
+                  <div class="iphone-dynamic-island">
+                    <span class="iphone-camera-dot"></span>
+                  </div>
+                  <div class="iphone-status-icons">
+                    <span class="iphone-signal-icon" title="Cellular Signal">
+                      <i></i><i></i><i></i><i></i>
+                    </span>
+                    <span class="material-symbols-outlined" style="font-size: 13px; color: #FFFFFF;">wifi</span>
+                    <span class="iphone-battery-icon" title="Battery 100%">
+                      <span class="iphone-battery-level"></span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="iphone-display-window">
+                  <div class="iphone-scaler">
+                    <iframe src="https://rexoraelectricians.nexbeck.com/" title="Rexora Electricians Live Website - Mobile" loading="lazy"></iframe>
+                  </div>
+                </div>
+
+                <div class="iphone-safari-bar">
+                  <div class="safari-url-pill">
+                    <span class="safari-aa-icon">AA</span>
+                    <div class="safari-url-text">
+                      <span class="material-symbols-outlined safari-lock-icon">lock</span>
+                      <span>rexoraelectricians.nexbeck.com</span>
+                    </div>
+                    <span class="material-symbols-outlined safari-reload-icon">refresh</span>
+                  </div>
+
+                  <div class="safari-nav-toolbar">
+                    <span class="material-symbols-outlined safari-nav-icon">arrow_back_ios</span>
+                    <span class="material-symbols-outlined safari-nav-icon">arrow_forward_ios</span>
+                    <span class="material-symbols-outlined safari-nav-icon">ios_share</span>
+                    <span class="material-symbols-outlined safari-nav-icon">menu_book</span>
+                    <span class="material-symbols-outlined safari-nav-icon">filter_none</span>
+                  </div>
+
+                  <div class="iphone-home-indicator"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: KEY DESIGN HIGHLIGHTS -->
+    <section class="site-wrapper" style="padding-top: clamp(48px, 7vh, 88px); padding-bottom: clamp(48px, 7vh, 88px);">
+      <div class="section-header">
+        <span class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 15px;">check_circle</span>
+          <span>Standard Inclusions</span>
+        </span>
+        <h2 class="section-title">Built Into Every Electrical Website We Deliver</h2>
+        <p class="section-subtitle">
+          Engineered to win homeowner trust and maximize direct bookings from day one.
+        </p>
+      </div>
+
+      <div class="editorial-pillars-grid">
+        <div class="editorial-pillar-item">
+          <span class="editorial-pillar-num">01</span>
+          <div>
+            <h3 class="editorial-pillar-title">1-Tap Emergency Calling</h3>
+            <p class="editorial-pillar-desc">
+              Homeowners in a blackout don't fill out long forms. Our mobile action bars place instant click-to-call buttons right under their thumb.
+            </p>
+          </div>
+        </div>
+
+        <div class="editorial-pillar-item">
+          <span class="editorial-pillar-num">02</span>
+          <div>
+            <h3 class="editorial-pillar-title">Verified Trade Credentials</h3>
+            <p class="editorial-pillar-desc">
+              We format your state contractor licence, Master Electricians affiliation, and insurance prominently so customers know they are hiring a licensed professional.
+            </p>
+          </div>
+        </div>
+
+        <div class="editorial-pillar-item">
+          <span class="editorial-pillar-num">03</span>
+          <div>
+            <h3 class="editorial-pillar-title">Local Suburb SEO</h3>
+            <p class="editorial-pillar-desc">
+              Target high-value domestic and commercial electrical searches across your primary service radius with clean code and structured trade schema.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: FINAL CTA -->
+    <section class="final-cta-section site-wrapper">
+      <div class="final-cta-open">
+        <div class="final-cta-content">
+          <span class="section-eyebrow">
+            <span class="material-symbols-outlined" style="font-size: 15px;">send</span>
+            <span>Get Started</span>
+          </span>
+          <h2 class="final-cta-title">
+            Want a Website Like This for Your Business?
+          </h2>
+          <p class="final-cta-desc">
+            Tell us about your services and primary suburbs. We'll deliver a tailored quote with guaranteed 7 to 18 day delivery.
+          </p>
+          <div style="margin-top: 8px;">
+            <a href="contact.html" class="btn-primary" style="height: 50px; padding: 0 32px;">
+              <span>Get a Free Quote</span>
+              <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL STRIP -->
+    <aside class="qsp-global-strip" aria-label="Nexbeck Core Value Pillars">
+      <div class="site-wrapper">
+        <div class="qsp-open-grid">
+          <div class="qsp-open-col">
+            <span class="material-symbols-outlined qsp-open-icon">phonelink</span>
+            <div>
+              <h4>Trade-Specific Design</h4>
+              <p>Mobile-first speeds, one-tap emergency calling, and REC licence credentials.</p>
+            </div>
+          </div>
+
+          <div class="qsp-open-col">
+            <span class="material-symbols-outlined qsp-open-icon">schedule</span>
+            <div>
+              <h4>7 to 18 Day Delivery</h4>
+              <p>Live on your domain in 1 to 3 weeks flat. No drawn-out meetings.</p>
+            </div>
+          </div>
+
+          <div class="qsp-open-col">
+            <span class="material-symbols-outlined qsp-open-icon">payments</span>
+            <div>
+              <h4>Fixed Trade Price</h4>
+              <p>Transparent rates from under $1,000 AUD, 100% code ownership, and zero monthly retainers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- ========================================================================
+       SHARED SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="site-wrapper">
+      <div class="footer-grid">
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <a href="index.html" class="brand-link">
+            <img src="images/logo.png" alt="Nexbeck" class="brand-logo-img" />
+            <span class="brand-text">NEXBECK</span>
+          </a>
+          <p style="font-family: var(--font-body); font-size: 0.875rem; color: #D6CEBE; line-height: 1.6; max-width: 300px;">
+            Web design agency engineered for Australian electricians and trade businesses to win more enquiries, get found locally, and scale online.
+          </p>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="width: 7px; height: 7px; border-radius: 50%; background: #34d399;"></span>
+            <span style="font-family: var(--font-ui); font-size: 0.75rem; color: #D6CEBE; font-weight: 600;">AUSTRALIA-WIDE SERVICE</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="footer-col-title">Navigation</span>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="services.html" class="footer-link">Services &amp; Pricing</a></li>
+            <li><a href="about.html" class="footer-link">About Nexbeck</a></li>
+            <li><a href="work.html" class="footer-link">Our Work</a></li>
+            <li><a href="contact.html" class="footer-link">Get a Free Quote</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="footer-col-title">Trade Packages</span>
+          <ul class="footer-links-list">
+            <li><a href="services.html" class="footer-link">Essential (Under $1,000 AUD)</a></li>
+            <li><a href="services.html" class="footer-link">Professional ($1,000–$1,500 AUD)</a></li>
+            <li><a href="services.html" class="footer-link">Premium ($1,500–$2,300 AUD)</a></li>
+            <li><a href="contact.html" class="footer-link">Custom Trade Scope</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="footer-col-title">Direct Contact</span>
+          <ul class="footer-links-list">
+            <li style="font-family: var(--font-body); font-size: 0.875rem; color: #E8E2D8;">
+              Email: <a href="mailto:contact@nexbeck.com" style="color: #FFFFFF; text-decoration: underline; text-underline-offset: 3px;">contact@nexbeck.com</a>
+            </li>
+            <li style="font-family: var(--font-body); font-size: 0.875rem; color: #E8E2D8;">
+              Trade Line: <a href="tel:+923149647176" style="color: #FFFFFF; font-weight: 600;">+92 3149647176</a>
+            </li>
+            <li style="font-family: var(--font-body); font-size: 0.8125rem; color: #D6CEBE; margin-top: 4px;">
+              Hours: Mon–Fri, 8:00 AM – 6:00 PM AEST
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p style="font-family: var(--font-body); font-size: 0.8125rem; color: #D6CEBE;">
+          &copy; 2026 Nexbeck. All rights reserved. Websites engineered for Australian trade contractors.
+        </p>
+        <p style="font-family: var(--font-ui); font-size: 0.75rem; color: #D6CEBE; letter-spacing: 0.04em;">
+          QUALITY • SPEED (7–18 DAYS) • FIXED PRICE
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" id="back-to-top-btn" class="back-to-top-btn" aria-label="Scroll back to top">
+    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_upward</span>
+  </button>
+
+  <aside id="mobile-action-bar" class="mobile-action-bar" aria-label="Quick Mobile Actions">
+    <div class="mobile-action-container">
+      <a href="tel:+923149647176" class="btn-ghost" style="flex: 1; height: 42px; font-size: 11px; padding: 0 12px;">
+        <span class="material-symbols-outlined" style="font-size: 16px; color: #34d399;">call</span>
+        <span>Call Directly</span>
+      </a>
+      <a href="contact.html" class="btn-primary" style="flex: 1; height: 42px; font-size: 11px; padding: 0 12px;">
+        <span>Get a Free Quote</span>
+        <span class="material-symbols-outlined" style="font-size: 14px;">arrow_forward</span>
+      </a>
+    </div>
+  </aside>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

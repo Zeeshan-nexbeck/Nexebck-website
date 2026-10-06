@@ -17,8 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Mobile navigation drawer
   initMobileDrawer();
 
-  // 5. Hero website showcase preview (Device Switcher, Live Mode Toggle, Interactive Services, Hotspots)
-  initHeroShowcase();
+  // 5. Live Project Showcase Toggle (Desktop | Mobile Frame)
+  initProjectShowcaseToggle();
+  initLaptopIframeScaling();
+  initPhoneIframeScaling();
 
   // 6. Interactive Job Payback / ROI Calculator with Live Volume Slider & Count-Up
   initPaybackCalculator();
@@ -330,8 +332,115 @@ function initMobileDrawer() {
 }
 
 /* ==========================================================================
-   4. HERO WEBSITE SHOWCASE INTERACTION (LIVE PREVIEW CONTROLS)
+   4. LIVE PROJECT SHOWCASE TOGGLE (LAPTOP VS PHONE FRAME)
    ========================================================================== */
+function initProjectShowcaseToggle() {
+  const toggleBtns = document.querySelectorAll('.showcase-toggle-btn');
+  const laptopView = document.getElementById('showcase-laptop-view');
+  const phoneView = document.getElementById('showcase-phone-view');
+
+  if (!toggleBtns.length || !laptopView || !phoneView) return;
+
+  toggleBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      toggleBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const view = btn.getAttribute('data-showcase-view');
+      if (view === 'mobile') {
+        laptopView.style.display = 'none';
+        phoneView.style.display = 'flex';
+      } else {
+        laptopView.style.display = 'flex';
+        phoneView.style.display = 'none';
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   SCALED DESKTOP VIEWPORT FOR LAPTOP MOCKUP (1080px Layout)
+   Maintains a crisp 1080px desktop layout width inside the iframe and
+   dynamically computes the scale factor to fit the mockup display cleanly.
+   Ensures natural vertical scrolling inside the mockup.
+   ========================================================================== */
+function initLaptopIframeScaling() {
+  const displays = document.querySelectorAll('.laptop-screen-display');
+  if (!displays.length) return;
+
+  function updateScales() {
+    displays.forEach((display) => {
+      const width = display.clientWidth;
+      if (width > 0) {
+        const scale = width / 1080;
+        display.style.setProperty('--laptop-scale', scale.toString());
+      }
+    });
+  }
+
+  // Initial calculation
+  updateScales();
+
+  // ResizeObserver for fluid responsive changes
+  if (window.ResizeObserver) {
+    const ro = new ResizeObserver(() => {
+      updateScales();
+    });
+    displays.forEach((display) => ro.observe(display));
+  }
+
+  window.addEventListener('resize', updateScales);
+
+  // Recalculate when view toggle buttons (Desktop | Mobile) are clicked
+  const toggleBtns = document.querySelectorAll('.showcase-toggle-btn');
+  toggleBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      setTimeout(updateScales, 40);
+    });
+  });
+}
+
+/* ==========================================================================
+   SCALED MOBILE VIEWPORT FOR IPHONE MOCKUP (390px Standard Layout)
+   Maintains authentic 390px iPhone layout width inside the iframe and
+   dynamically computes the scale factor to fit the phone display cleanly.
+   Ensures natural vertical scrolling and crisp rendering.
+   ========================================================================== */
+function initPhoneIframeScaling() {
+  const displays = document.querySelectorAll('.iphone-display-window');
+  if (!displays.length) return;
+
+  function updateScales() {
+    displays.forEach((display) => {
+      const width = display.clientWidth;
+      if (width > 0) {
+        const scale = width / 390;
+        display.style.setProperty('--phone-scale', scale.toString());
+      }
+    });
+  }
+
+  // Initial calculation
+  updateScales();
+
+  // ResizeObserver for fluid responsive changes
+  if (window.ResizeObserver) {
+    const ro = new ResizeObserver(() => {
+      updateScales();
+    });
+    displays.forEach((display) => ro.observe(display));
+  }
+
+  window.addEventListener('resize', updateScales);
+
+  // Recalculate when view toggle buttons are clicked
+  const toggleBtns = document.querySelectorAll('.showcase-toggle-btn');
+  toggleBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      setTimeout(updateScales, 40);
+    });
+  });
+}
+
 function initHeroShowcase() {
   const showcaseContainer = document.getElementById('hero-showcase-container');
   if (!showcaseContainer) return;
@@ -546,40 +655,44 @@ function initPaybackCalculator() {
 
   const jobData = {
     switchboard: {
-      name: 'Main Switchboard Upgrade & RCD Safety Switches',
-      avgTicket: 1400,
-      netProfit: 950,
-      note: 'One single switchboard replacement completely pays off your $890 Full Site Package with $60 instant net profit on day one.'
-    },
-    evcharger: {
-      name: 'Home EV Wallbox Charger Installation',
-      avgTicket: 1200,
-      netProfit: 800,
-      note: 'Installing just 1 Tesla / universal EV home charger pays for your website. Every customer booking after that is pure profit.'
-    },
-    battery: {
-      name: 'Solar Inverter or Home Battery Storage System',
-      avgTicket: 2800,
-      netProfit: 1600,
-      note: 'A single home battery or solar retrofit enquiry generates over $1,600 net margin — more than double the cost of the entire site.'
-    },
-    rewire: {
-      name: 'Full Home LED Downlight Upgrade or Safety Rewire',
-      avgTicket: 3600,
-      netProfit: 2200,
-      note: 'Just 1 renovation rewire covers the site nearly 3 times over. No more bidding against 5 sparkies on HiPages.'
-    },
-    aircon: {
-      name: 'Split System Air Conditioning Installation',
-      avgTicket: 1600,
-      netProfit: 1050,
-      note: 'One split system supply-and-install job covers your entire 5-page custom website with cash left in your pocket.'
+      name: 'Main Switchboard Upgrade & Safety Verification',
+      priceRange: '$1,200–$3,500',
+      avgTicket: 2350,
+      netProfit: 1550,
+      payback: '1 Job',
+      note: 'A single switchboard upgrade pays for your entire website with immediate net profit on day one.'
     },
     emergency: {
-      name: 'After-Hours Emergency Power Outage Callout',
-      avgTicket: 450,
-      netProfit: 350,
-      note: 'Just 2 emergency night/weekend callouts pay off your Starter Package ($490 AUD) entirely.'
+      name: 'Emergency / After-Hours Callout',
+      priceRange: '$200–$500',
+      avgTicket: 350,
+      netProfit: 250,
+      payback: '2–3 Callouts',
+      note: 'Emergency after-hours work carries premium rates; just 2 to 3 urgent callouts recover your initial website investment.'
+    },
+    rcd: {
+      name: 'Safety Switch (RCD) Installation',
+      priceRange: '$170–$400 per switch',
+      avgTicket: 850,
+      netProfit: 550,
+      payback: '2–3 Switches',
+      note: 'Homeowners routinely upgrade 3 to 6 safety switches at once, quickly covering your digital package.'
+    },
+    downlights: {
+      name: 'Downlight / Lighting Installation',
+      priceRange: '$90–$150 per light',
+      avgTicket: 1400,
+      netProfit: 900,
+      payback: '1 Typical Home',
+      note: 'Downlight conversions typically involve 10 to 20 fittings across living spaces, turning one enquiry into full site payback.'
+    },
+    gpo: {
+      name: 'Powerpoint (GPO) Installation',
+      priceRange: '$60–$120',
+      avgTicket: 600,
+      netProfit: 400,
+      payback: '1 Multi-Point Job',
+      note: 'Kitchen and renovation powerpoint upgrades bundled together generate immediate, debt-free margin for your business.'
     }
   };
 
@@ -594,16 +707,11 @@ function initPaybackCalculator() {
 
     if (jobTitleEl) jobTitleEl.textContent = data.name;
     if (packageComparisonEl) packageComparisonEl.textContent = data.note;
-    if (paybackJobsEl) paybackJobsEl.textContent = (data.netProfit >= 890 || data.avgTicket >= 890) ? '1 Job' : '1–2 Jobs';
-
-    // Animated count-up for single ticket profit
-    if (profitMarginEl) {
-      animateNumber(profitMarginEl, previousProfit, data.netProfit, '+$', '', 350);
-      previousProfit = data.netProfit;
-    }
+    if (paybackJobsEl) paybackJobsEl.textContent = data.payback;
+    if (profitMarginEl) profitMarginEl.textContent = data.priceRange;
 
     if (jobValueEl) {
-      animateNumber(jobValueEl, 0, data.avgTicket, '$', ' AUD', 350);
+      animateNumber(jobValueEl, 0, data.avgTicket, '$', ' AUD (avg)', 350);
     }
 
     // Volume Slider Calculations
@@ -612,8 +720,8 @@ function initPaybackCalculator() {
     }
 
     const calculatedAnnualRevenue = monthlyJobs * data.avgTicket * 12;
-    const calculatedHiPagesWaste = Math.round(monthlyJobs * 2.2 * 65 * 12);
-    const calculatedNetSavings = calculatedAnnualRevenue - 890;
+    const calculatedLeadWaste = Math.round(monthlyJobs * 2.2 * 65 * 12);
+    const calculatedNetSavings = calculatedAnnualRevenue - 1000;
 
     if (annualRevenueEl) {
       animateNumber(annualRevenueEl, previousRevenue, calculatedAnnualRevenue, '$', ' AUD/yr', 450);
@@ -621,8 +729,8 @@ function initPaybackCalculator() {
     }
 
     if (hipagesWasteEl) {
-      animateNumber(hipagesWasteEl, previousWaste, calculatedHiPagesWaste, '$', ' AUD/yr Wasted', 450);
-      previousWaste = calculatedHiPagesWaste;
+      animateNumber(hipagesWasteEl, previousWaste, calculatedLeadWaste, '$', ' AUD/yr Saved', 450);
+      previousWaste = calculatedLeadWaste;
     }
 
     if (netSavingsEl) {
@@ -666,16 +774,22 @@ function initScopeEstimator() {
   const selectBtn = document.getElementById('estimator-select-btn');
 
   function calculateScope() {
-    let basePrice = 890;
-    let selectedPkgKey = 'full';
+    let basePrice = 1250;
+    let selectedPkgKey = 'professional';
     let deliveryDays = '7 to 14 Days';
 
     pkgRadios.forEach((radio) => {
       if (radio.checked) {
         selectedPkgKey = radio.value;
-        if (selectedPkgKey === 'starter') {
-          basePrice = 490;
+        if (selectedPkgKey === 'essential' || selectedPkgKey === 'starter') {
+          basePrice = 950;
           deliveryDays = 'Within 7 Days';
+        } else if (selectedPkgKey === 'premium') {
+          basePrice = 1900;
+          deliveryDays = '14 to 18 Days';
+        } else if (selectedPkgKey === 'custom') {
+          basePrice = 2500;
+          deliveryDays = 'Custom Scope';
         }
       }
     });
@@ -885,10 +999,10 @@ function initContactFormHandler() {
 
     setTimeout(() => {
       form.style.display = 'none';
+      const formIntro = document.getElementById('quote-form-intro');
+      if (formIntro) formIntro.style.display = 'none';
       if (successCard) {
         successCard.style.display = 'flex';
-        if (successClientName) successClientName.textContent = `${nameVal} (${bizVal})`;
-        if (successPackageName) successPackageName.textContent = selectedPkg;
         successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }, 700);
@@ -898,13 +1012,15 @@ function initContactFormHandler() {
     resetBtn.addEventListener('click', () => {
       form.reset();
       form.style.display = 'block';
+      const formIntro = document.getElementById('quote-form-intro');
+      if (formIntro) formIntro.style.display = 'block';
       if (successCard) successCard.style.display = 'none';
       presetChips.forEach((c) => c.classList.remove('active'));
       updateFormProgress();
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.innerHTML = `
-          <span>Get a Free Quote</span>
+          <span>Submit Form</span>
           <span class="material-symbols-outlined">arrow_forward</span>
         `;
       }
@@ -1069,7 +1185,7 @@ function initSuburbTurfSimulator() {
         setTimeout(() => {
           customFeedback.innerHTML = `
             <div style="padding: 12px 14px; background: rgba(52, 211, 153, 0.08); border: 1px solid rgba(52, 211, 153, 0.3); border-radius: var(--radius-sm); color: #34d399; font-size: 0.8125rem;">
-              <strong>✓ Ready for Launch:</strong> We configure Google Schema.org <code>areaServed</code> tags for <strong>${query}</strong> + surrounding adjacent suburbs so when local homeowners search, your phone rings directly without HiPages lead auction fees.
+              <strong>✓ Ready for Launch:</strong> We configure Google Schema.org <code>areaServed</code> tags for <strong>${query}</strong> + surrounding adjacent suburbs so when local homeowners search, your phone rings directly without directory lead auction fees.
             </div>
           `;
         }, 500);

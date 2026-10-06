@@ -25,6 +25,7 @@ export default defineConfig(() => {
           main: path.resolve(__dirname, 'project/index.html'),
           services: path.resolve(__dirname, 'project/services.html'),
           about: path.resolve(__dirname, 'project/about.html'),
+          work: path.resolve(__dirname, 'project/work.html'),
           contact: path.resolve(__dirname, 'project/contact.html'),
         },
       },
