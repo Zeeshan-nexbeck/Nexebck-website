@@ -3275,7 +3275,27 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 768px) {
   .calc-display-panel {
-    grid-template-columns: 1.35fr 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(28px, 4vw, 56px);
+  }
+}
+
+.calc-payback-panel-stat {
+  border-left: 1px solid var(--border-subtle);
+  padding-left: clamp(24px, 3.5vw, 44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+@media (max-width: 767px) {
+  .calc-payback-panel-stat {
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    padding-left: 0;
+    padding-top: 20px;
   }
 }
 
@@ -3324,6 +3344,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-accent);
   line-height: 1;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+#calc-payback-jobs-count {
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .calc-stat-label {

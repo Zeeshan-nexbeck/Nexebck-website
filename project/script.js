@@ -639,9 +639,7 @@ function animateNumber(element, startVal, endVal, prefix = '', suffix = '', dura
 function initPaybackCalculator() {
   const calcButtons = document.querySelectorAll('.calc-job-btn');
   const jobTitleEl = document.getElementById('calc-selected-job-title');
-  const jobValueEl = document.getElementById('calc-selected-job-value');
   const packageComparisonEl = document.getElementById('calc-selected-comparison');
-  const profitMarginEl = document.getElementById('calc-profit-margin-value');
   const paybackJobsEl = document.getElementById('calc-payback-jobs-count');
 
   // Interactive Volume Slider elements
@@ -656,48 +654,47 @@ function initPaybackCalculator() {
   const jobData = {
     switchboard: {
       name: 'Main Switchboard Upgrade & Safety Verification',
-      priceRange: '$1,200–$3,500',
+      priceRange: '$1,200 – $3,500',
       avgTicket: 2350,
       netProfit: 1550,
       payback: '1 Job',
-      note: 'A single switchboard upgrade pays for your entire website with immediate net profit on day one.'
+      note: 'One switchboard upgrade alone covers your Essential or Professional package outright, with real profit left over on day one.'
     },
     emergency: {
-      name: 'Emergency / After-Hours Callout',
-      priceRange: '$200–$500',
-      avgTicket: 350,
-      netProfit: 250,
-      payback: '2–3 Callouts',
-      note: 'Emergency after-hours work carries premium rates; just 2 to 3 urgent callouts recover your initial website investment.'
+      name: 'Smoke Alarm & Safety Compliance Upgrade',
+      priceRange: '$500 – $2,000',
+      avgTicket: 1250,
+      netProfit: 800,
+      payback: '1 or 2 Jobs',
+      note: 'Compliance jobs come back every lease cycle. Two bookings and your website is paid off for good — then it just keeps earning.'
     },
     rcd: {
-      name: 'Safety Switch (RCD) Installation',
-      priceRange: '$170–$400 per switch',
-      avgTicket: 850,
-      netProfit: 550,
-      payback: '2–3 Switches',
-      note: 'Homeowners routinely upgrade 3 to 6 safety switches at once, quickly covering your digital package.'
+      name: 'House Rewire (Partial to Full)',
+      priceRange: '$4,000 – $12,000',
+      avgTicket: 8000,
+      netProfit: 5000,
+      payback: '1 Job',
+      note: 'A single house rewire covers your entire digital investment with significant profit left over.'
     },
     downlights: {
-      name: 'Downlight / Lighting Installation',
-      priceRange: '$90–$150 per light',
-      avgTicket: 1400,
-      netProfit: 900,
-      payback: '1 Typical Home',
-      note: 'Downlight conversions typically involve 10 to 20 fittings across living spaces, turning one enquiry into full site payback.'
+      name: '3KW - 5KW Solar Installation',
+      priceRange: '$1,000 – $2,000',
+      avgTicket: 1500,
+      netProfit: 950,
+      payback: '1 Job',
+      note: 'A single solar setup covers your entire digital investment.'
     },
     gpo: {
-      name: 'Powerpoint (GPO) Installation',
-      priceRange: '$60–$120',
-      avgTicket: 600,
-      netProfit: 400,
-      payback: '1 Multi-Point Job',
-      note: 'Kitchen and renovation powerpoint upgrades bundled together generate immediate, debt-free margin for your business.'
+      name: 'EV Charger Installation',
+      priceRange: '$1,000 – $3,500',
+      avgTicket: 2250,
+      netProfit: 1400,
+      payback: '1 Job',
+      note: 'EV demand keeps climbing. One install can cover your entire site, with most of the job margin still in your pocket.'
     }
   };
 
   let currentJobKey = 'switchboard';
-  let previousProfit = 0;
   let previousRevenue = 0;
   let previousWaste = 0;
 
@@ -708,11 +705,6 @@ function initPaybackCalculator() {
     if (jobTitleEl) jobTitleEl.textContent = data.name;
     if (packageComparisonEl) packageComparisonEl.textContent = data.note;
     if (paybackJobsEl) paybackJobsEl.textContent = data.payback;
-    if (profitMarginEl) profitMarginEl.textContent = data.priceRange;
-
-    if (jobValueEl) {
-      animateNumber(jobValueEl, 0, data.avgTicket, '$', ' AUD (avg)', 350);
-    }
 
     // Volume Slider Calculations
     if (volumeCountBadge) {
