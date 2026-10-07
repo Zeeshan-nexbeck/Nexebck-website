@@ -20,6 +20,267 @@
   <!-- Shared Global Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
+  <style>
+    /* Section 2: What We Do (3 Core Services Grid) */
+    .services-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(20px, 2.5vw, 28px);
+    }
+    @media (min-width: 900px) {
+      .services-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .service-offer-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: clamp(24px, 3vw, 32px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+    .service-offer-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--color-accent);
+      box-shadow: 0 12px 28px -10px rgba(28, 26, 23, 0.12);
+    }
+    .service-offer-card.highlight {
+      border-color: var(--color-accent);
+      background: linear-gradient(180deg, #FFFFFF 0%, #FAF6EE 100%);
+    }
+    .service-tag {
+      font-family: var(--font-ui);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-accent);
+      margin-bottom: 6px;
+      display: inline-block;
+    }
+    .service-offer-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .service-offer-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: rgba(201, 138, 44, 0.12);
+      border: 1px solid rgba(201, 138, 44, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      flex-shrink: 0;
+    }
+    .service-offer-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .service-offer-desc {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .service-features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .service-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .service-feature-item .material-symbols-outlined {
+      color: var(--color-accent);
+      font-size: 16px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* Section 3: Qualities of Our Sites Grid */
+    .qualities-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(16px, 2vw, 22px);
+    }
+    @media (min-width: 600px) {
+      .qualities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .qualities-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .quality-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: clamp(22px, 2.5vw, 28px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .quality-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--color-accent);
+      box-shadow: 0 10px 24px -8px rgba(28, 26, 23, 0.08);
+    }
+    .quality-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: rgba(201, 138, 44, 0.1);
+      border: 1px solid rgba(201, 138, 44, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      margin-bottom: 2px;
+      flex-shrink: 0;
+    }
+    .quality-card-title {
+      font-family: var(--font-display);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+    }
+    .quality-card-desc {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Section 4: Pricing Packages Grid Layout */
+    .pricing-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+    @media (min-width: 768px) {
+      .pricing-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .pricing-special-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    @media (min-width: 768px) {
+      .pricing-special-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .pricing-special-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: clamp(24px, 3vw, 36px) clamp(20px, 2.5vw, 28px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .pricing-special-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px -8px rgba(28, 26, 23, 0.1);
+    }
+    .pricing-special-card.audit-card {
+      border-color: rgba(30, 130, 86, 0.45);
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(30, 130, 86, 0.03) 100%);
+    }
+    .pricing-special-card.audit-card:hover {
+      border-color: var(--color-success);
+    }
+    .pricing-special-card.redesign-card {
+      border-color: rgba(201, 138, 44, 0.45);
+      background: linear-gradient(180deg, #FFFFFF 0%, rgba(201, 138, 44, 0.03) 100%);
+    }
+    .pricing-special-card.redesign-card:hover {
+      border-color: var(--color-accent);
+    }
+
+    /* Section 5: Standard Inclusions 4-Pillar Strip */
+    .inclusions-banner-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    @media (min-width: 640px) {
+      .inclusions-banner-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (min-width: 1024px) {
+      .inclusions-banner-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    .inclusion-pillar-card {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .inclusion-pillar-icon {
+      color: var(--color-accent);
+      font-size: 22px;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+    .inclusion-pillar-title {
+      font-family: var(--font-display);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 3px;
+    }
+    .inclusion-pillar-desc {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+  </style>
+
   <!-- Schema.org JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
@@ -115,24 +376,236 @@
         </p>
 
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 6px;">
-          <a href="#pricing-cards" class="btn-primary" style="height: 48px; padding: 0 26px;">
-            <span>Compare Packages Below</span>
+          <a href="#services-offered" class="btn-primary" style="height: 48px; padding: 0 26px;">
+            <span>Explore Our Services</span>
             <span class="material-symbols-outlined" style="font-size: 18px;">expand_more</span>
           </a>
-          <a href="contact.html" class="btn-ghost" style="height: 48px; padding: 0 24px;">
-            <span>Get a Free Quote</span>
-            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+          <a href="#pricing-cards" class="btn-ghost" style="height: 48px; padding: 0 24px;">
+            <span>View Pricing Packages</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">payments</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: PRICING CARDS (Starter vs Full Site) -->
-    <section id="pricing-cards" class="site-wrapper" style="padding-bottom: clamp(48px, 7vh, 88px);">
+    <!-- ========================================================================
+         SECTION 2: WHAT WE DO (OUR 3 CORE SERVICES)
+         ======================================================================== -->
+    <section id="services-offered" class="site-wrapper" style="padding-top: clamp(40px, 6vh, 64px); padding-bottom: clamp(48px, 7vh, 80px); border-top: 1px solid var(--border-subtle);">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 15px;">home_repair_service</span>
+          <span>What We Do</span>
+        </span>
+        <h2 class="section-title">Three Targeted Ways We Help Trade Businesses Grow Online</h2>
+        <p class="section-subtitle">
+          We specialize exclusively in digital solutions for Australian electricians and trade contractors. Whether you need a ground-up build, an overhaul, or a performance check — we've got you covered.
+        </p>
+      </div>
+
+      <div class="services-grid-3">
+        <!-- Service 1: Custom Website Design & Build -->
+        <div class="service-offer-card">
+          <div>
+            <div class="service-offer-header">
+              <span class="service-tag">Ground-Up Builds</span>
+              <div class="service-offer-icon-box">
+                <span class="material-symbols-outlined" style="font-size: 24px;">design_services</span>
+              </div>
+            </div>
+            <h3 class="service-offer-title">Custom Website Design &amp; Build</h3>
+            <p class="service-offer-desc">
+              Engineered from scratch for Australian sparkies and contractors wanting a high-converting digital storefront. We custom-code every page around your trade specialties, target suburbs, and how homeowners actually search on Google — completely free of bloated templates or slow page builders.
+            </p>
+            <ul class="service-features-list">
+              <li class="service-feature-item">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>Tailored for high-margin jobs (switchboards, EV chargers, rewires)</span>
+              </li>
+              <li class="service-feature-item">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>1-tap emergency phone dialers &amp; fast interactive quote intake</span>
+              </li>
+              <li class="service-feature-item">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>Guaranteed fixed one-time pricing delivered in 7 to 18 days</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a href="#pricing-cards" class="btn-primary" style="width: 100%; height: 46px;">
+              <span>View Build Packages</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">arrow_downward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 2: Website Redesign -->
+        <div class="service-offer-card highlight">
+          <div>
+            <div class="service-offer-header">
+              <span class="service-tag">Modernize &amp; Speed Up</span>
+              <div class="service-offer-icon-box">
+                <span class="material-symbols-outlined" style="font-size: 24px;">auto_fix_high</span>
+              </div>
+            </div>
+            <h3 class="service-offer-title">Website Redesign</h3>
+            <p class="service-offer-desc">
+              Already have a trade website that looks dated, crawls on mobile, or isn't generating incoming calls? We rebuild and modernize your existing site using your proven content and photography. We strip out bloated plugins, speed up page loads, and reorganize your layout into a crisp lead machine — without losing your existing Google rankings.
+            </p>
+            <ul class="service-features-list">
+              <li class="service-feature-item">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>Preserve &amp; elevate your existing copy, photos, and domain equity</span>
+              </li>
+              <li class="service-feature-item">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>Zero downtime migration to lightweight, mobile-first static code</span>
+              </li>
+              <li class="service-feature-item">
+                <span class="material-symbols-outlined">check_circle</span>
+                <span>Reviewed individually — custom fixed quote with zero obligation</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a href="contact.html?package=redesign" class="btn-primary" style="width: 100%; height: 46px;">
+              <span>Request Redesign Quote</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service 3: Free Website Audit -->
+        <div class="service-offer-card">
+          <div>
+            <div class="service-offer-header">
+              <span class="service-tag" style="color: var(--color-success);">100% Free • 48-Hour Report</span>
+              <div class="service-offer-icon-box" style="background: rgba(30, 130, 86, 0.12); border-color: rgba(30, 130, 86, 0.3); color: var(--color-success);">
+                <span class="material-symbols-outlined" style="font-size: 24px;">troubleshoot</span>
+              </div>
+            </div>
+            <h3 class="service-offer-title">Website Diagnostic Audit</h3>
+            <p class="service-offer-desc">
+              Wondering why your current website isn't ranking in local search or turning visitors into phone calls? Submit your URL for a complimentary, no-obligation audit. We manually inspect your mobile speed, local SEO schema, call-to-action visibility, and job-intake friction — then deliver an actionable, plain-English PDF report directly to your inbox within 48 hours.
+            </p>
+            <ul class="service-features-list">
+              <li class="service-feature-item">
+                <span class="material-symbols-outlined" style="color: var(--color-success);">check_circle</span>
+                <span>Forensic mobile 4G/5G speed &amp; responsive layout analysis</span>
+              </li>
+              <li class="service-feature-item">
+                <span class="material-symbols-outlined" style="color: var(--color-success);">check_circle</span>
+                <span>Local Google Maps &amp; suburb search visibility review</span>
+              </li>
+              <li class="service-feature-item">
+                <span class="material-symbols-outlined" style="color: var(--color-success);">check_circle</span>
+                <span>Clear step-by-step fix recommendations with zero sales pressure</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a href="contact.html?package=audit" class="btn-ghost" style="width: 100%; height: 46px; border-color: rgba(30, 130, 86, 0.5); color: var(--color-success);">
+              <span>Claim Free 48-Hr Audit</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 3: QUALITIES OF OUR SITES (STANDARDS & CAPABILITIES)
+         ======================================================================== -->
+    <section id="site-qualities" class="site-wrapper" style="padding-top: clamp(44px, 6vh, 76px); padding-bottom: clamp(48px, 7vh, 80px); border-top: 1px solid var(--border-subtle);">
+      <div class="section-header text-center">
+        <span class="section-eyebrow">
+          <span class="material-symbols-outlined" style="font-size: 15px;">verified</span>
+          <span>Trade Standards</span>
+        </span>
+        <h2 class="section-title">Core Qualities Built Into Every Trade Website</h2>
+        <p class="section-subtitle">
+          Every website we code is crafted with these foundational engineering standards — ensuring maximum reliability, lightning-fast loading, and real customer enquiries.
+        </p>
+      </div>
+
+      <div class="qualities-grid">
+        <!-- Quality 1 -->
+        <div class="quality-card">
+          <div class="quality-icon-box">
+            <span class="material-symbols-outlined" style="font-size: 22px;">bolt</span>
+          </div>
+          <h3 class="quality-card-title">Lightning-Fast Static Performance</h3>
+          <p class="quality-card-desc">
+            Hand-crafted static architecture with zero bloated plugins or slow SQL databases. Loads in under a second on mobile 4G/5G so you never lose an emergency call on site.
+          </p>
+        </div>
+
+        <!-- Quality 2 -->
+        <div class="quality-card">
+          <div class="quality-icon-box">
+            <span class="material-symbols-outlined" style="font-size: 22px;">smartphone</span>
+          </div>
+          <h3 class="quality-card-title">Mobile-First Trade Architecture</h3>
+          <p class="quality-card-desc">
+            Engineered around how homeowners search during an electrical issue: thumb-friendly navigation, prominent 1-tap call dialers, and straightforward service breakdowns.
+          </p>
+        </div>
+
+        <!-- Quality 3 -->
+        <div class="quality-card">
+          <div class="quality-icon-box">
+            <span class="material-symbols-outlined" style="font-size: 22px;">travel_explore</span>
+          </div>
+          <h3 class="quality-card-title">Local SEO &amp; Suburb Targeting</h3>
+          <p class="quality-card-desc">
+            Clean semantic markup, metadata, and localized Schema.org data configured on launch so Google recognizes your local trade licence and service radius.
+          </p>
+        </div>
+
+        <!-- Quality 4 -->
+        <div class="quality-card">
+          <div class="quality-icon-box">
+            <span class="material-symbols-outlined" style="font-size: 22px;">history_edu</span>
+          </div>
+          <h3 class="quality-card-title">Trade-Specific Copywriting</h3>
+          <p class="quality-card-desc">
+            We write clear, persuasive trade messaging that speaks directly to Australian homeowners and builders. No generic agency filler text or robotic jargon.
+          </p>
+        </div>
+
+        <!-- Quality 5 -->
+        <div class="quality-card">
+          <div class="quality-icon-box">
+            <span class="material-symbols-outlined" style="font-size: 22px;">key</span>
+          </div>
+          <h3 class="quality-card-title">100% Code &amp; Asset Ownership</h3>
+          <p class="quality-card-desc">
+            You own your website, code, and content outright. We never hold your business hostage with monthly platform lock-ins or costly exit penalties.
+          </p>
+        </div>
+
+        <!-- Quality 6 -->
+        <div class="quality-card">
+          <div class="quality-icon-box">
+            <span class="material-symbols-outlined" style="font-size: 22px;">rocket_launch</span>
+          </div>
+          <h3 class="quality-card-title">Transparent Staging &amp; Handover</h3>
+          <p class="quality-card-desc">
+            Test and review your new website on your personal mobile phone via a private staging link before anything goes live, with full support during DNS switchover.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         SECTION 4: PRICING PACKAGES (NEW BUILDS, AUDIT & REDESIGN)
+         ======================================================================== -->
+    <section id="pricing-cards" class="site-wrapper" style="padding-top: clamp(44px, 6vh, 76px); padding-bottom: clamp(48px, 7vh, 88px); border-top: 1px solid var(--border-subtle);">
       <div class="section-header text-center">
         <span class="section-eyebrow">
           <span class="material-symbols-outlined" style="font-size: 15px;">sell</span>
-          <span>Fixed Investment Tiers</span>
+          <span>Transparent Trade Packages</span>
         </span>
         <h2 class="section-title">Choose the Package That Fits Your Trade Goals</h2>
         <p class="section-subtitle">
@@ -140,7 +613,8 @@
         </p>
       </div>
 
-      <div class="pricing-grid">
+      <!-- Part 1: Core New Build Packages (3 Cards) -->
+      <div class="pricing-grid-3">
         <!-- Tier 1: Essential -->
         <div class="pricing-card">
           <div>
@@ -319,58 +793,117 @@
             </a>
           </div>
         </div>
+      </div>
 
-        <!-- Tier 4: Custom -->
-        <div class="pricing-card">
+      <!-- Part 2: Existing Site Services (Free Audit & Redesign Packages) -->
+      <div class="pricing-special-grid">
+        <!-- Package 4: Free Website Audit -->
+        <div class="pricing-special-card audit-card">
           <div>
-            <span style="font-family: var(--font-ui); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; color: var(--text-dim); letter-spacing: 0.08em; display: block; margin-bottom: 6px;">
-              Commercial &amp; Multi-Trade
-            </span>
-            <h3 class="pricing-tier-name">Custom</h3>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px;">
+              <span style="font-family: var(--font-ui); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; color: var(--color-success); letter-spacing: 0.08em;">
+                Existing Trade Websites • Diagnostic
+              </span>
+              <span style="background: rgba(30, 130, 86, 0.12); color: var(--color-success); font-family: var(--font-ui); font-size: 0.6875rem; font-weight: 700; padding: 3px 8px; border-radius: var(--radius-full); text-transform: uppercase;">
+                100% Free
+              </span>
+            </div>
+
+            <h3 class="pricing-tier-name" style="margin-bottom: 6px;">Website Diagnostic Audit</h3>
             <p class="pricing-tier-desc">
-              Tailored digital architecture for multi-location electrical firms, franchises, or custom quoting portals.
+              Unsure why your site isn't generating calls? We manually analyze your site's mobile speed, local suburb schema, and conversion bottlenecks, sending an actionable report directly to your email.
             </p>
 
             <div class="price-box">
-              <span class="price-amount" style="font-size: 1.625rem;">Quote on Request</span>
+              <span class="price-currency" style="color: var(--color-success); font-size: 1.125rem;">FREE</span>
+              <span class="price-amount" style="color: var(--color-success);">$0</span>
+              <span class="price-period">AUD • No Credit Card Required</span>
             </div>
 
-            <div class="pricing-delivery-badge">
+            <div class="pricing-delivery-badge" style="background: rgba(30, 130, 86, 0.08); color: var(--color-success);">
               <span class="material-symbols-outlined" style="font-size: 16px;">timer</span>
-              <span>Tailored Sprint Scope</span>
+              <span>Delivered to Your Email in 48 Hours</span>
             </div>
 
             <ul class="pricing-features-list">
               <li class="pricing-feature-item">
-                <span class="material-symbols-outlined check-icon">check_circle</span>
-                <span><strong>Custom Page Architecture:</strong> Tailored to your exact scale.</span>
+                <span class="material-symbols-outlined check-icon" style="color: var(--color-success);">check_circle</span>
+                <span><strong>Mobile 4G/5G Speed Breakdown:</strong> Uncovers slow plugins &amp; page weight issues.</span>
               </li>
               <li class="pricing-feature-item">
-                <span class="material-symbols-outlined check-icon">check_circle</span>
-                <span><strong>Third-Party CRM/ERP:</strong> Integrate Jobber, Tradify, or ServiceM8.</span>
+                <span class="material-symbols-outlined check-icon" style="color: var(--color-success);">check_circle</span>
+                <span><strong>Local Suburb SEO Check:</strong> Verification of meta tags, schema &amp; maps presence.</span>
               </li>
               <li class="pricing-feature-item">
-                <span class="material-symbols-outlined check-icon">check_circle</span>
-                <span><strong>Multi-Location Suburb Hubs:</strong> Regional electrical domination.</span>
+                <span class="material-symbols-outlined check-icon" style="color: var(--color-success);">check_circle</span>
+                <span><strong>Conversion Friction Audit:</strong> Reviews click-to-call dialers &amp; quote forms.</span>
               </li>
               <li class="pricing-feature-item">
-                <span class="material-symbols-outlined check-icon">check_circle</span>
-                <span><strong>Tailored Revisions:</strong> Dedicated engineering lead.</span>
-              </li>
-              <li class="pricing-feature-item">
-                <span class="material-symbols-outlined check-icon">check_circle</span>
-                <span><strong>Custom Timeline:</strong> Scheduled around your business commitments.</span>
-              </li>
-              <li class="pricing-feature-item">
-                <span class="material-symbols-outlined check-icon">check_circle</span>
-                <span><strong>100% Code Ownership:</strong> Complete code handover.</span>
+                <span class="material-symbols-outlined check-icon" style="color: var(--color-success);">check_circle</span>
+                <span><strong>Plain-English Report:</strong> Clear fix suggestions with zero pushy sales calls.</span>
               </li>
             </ul>
           </div>
 
           <div style="margin-top: 24px;">
-            <a href="contact.html?package=custom" class="btn-ghost" style="width: 100%; height: 46px;">
-              <span>Inquire Custom Scope</span>
+            <a href="contact.html?package=audit" class="btn-ghost" style="width: 100%; height: 46px; border-color: rgba(30, 130, 86, 0.5); color: var(--color-success);">
+              <span>Claim Free 48-Hour Audit</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Package 5: Website Redesign -->
+        <div class="pricing-special-card redesign-card">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px;">
+              <span style="font-family: var(--font-ui); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.08em;">
+                Existing Trade Websites • Overhaul
+              </span>
+              <span style="background: rgba(201, 138, 44, 0.12); color: var(--color-accent); font-family: var(--font-ui); font-size: 0.6875rem; font-weight: 700; padding: 3px 8px; border-radius: var(--radius-full); text-transform: uppercase;">
+                Custom Scope
+              </span>
+            </div>
+
+            <h3 class="pricing-tier-name" style="margin-bottom: 6px;">Website Redesign</h3>
+            <p class="pricing-tier-desc">
+              Have an existing website that needs a complete speed and visual upgrade? We inspect your current site, reuse your proven content, and propose an upfront fixed quote tailored to your exact structure.
+            </p>
+
+            <div class="price-box">
+              <span class="price-currency" style="font-size: 1.125rem; font-weight: 700; color: var(--text-muted);">Scope-Based</span>
+              <span class="price-amount" style="font-size: 1.75rem;">Custom Quote</span>
+              <span class="price-period">AUD (Proposed on Review)</span>
+            </div>
+
+            <div class="pricing-delivery-badge">
+              <span class="material-symbols-outlined" style="font-size: 16px;">timer</span>
+              <span>7 to 14 Days Typical Turnaround</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                <span><strong>No Fixed Price Bracket:</strong> We review your existing site and propose an honest price.</span>
+              </li>
+              <li class="pricing-feature-item">
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                <span><strong>Full Content Migration:</strong> We reuse your established text, imagery &amp; testimonials.</span>
+              </li>
+              <li class="pricing-feature-item">
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                <span><strong>Zero Downtime Transition:</strong> Complete rebuild to lightweight static code.</span>
+              </li>
+              <li class="pricing-feature-item">
+                <span class="material-symbols-outlined check-icon">check_circle</span>
+                <span><strong>100% Code Ownership:</strong> Keep your domain equity with zero ongoing agency retainers.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <a href="contact.html?package=redesign" class="btn-primary" style="width: 100%; height: 46px;">
+              <span>Request Redesign Proposal</span>
               <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
             </a>
           </div>
@@ -396,8 +929,8 @@
       </div>
     </section>
 
-    <!-- SECTION 3: WHAT'S INCLUDED TABLE -->
-    <section id="included-features" class="site-wrapper" style="padding-bottom: clamp(48px, 7vh, 88px);">
+    <!-- SECTION 5: WHAT'S INCLUDED IN EVERY BUILD -->
+    <section id="included-features" class="site-wrapper" style="padding-top: clamp(44px, 6vh, 76px); padding-bottom: clamp(48px, 7vh, 88px); border-top: 1px solid var(--border-subtle);">
       <div class="section-header">
         <span class="section-eyebrow">
           <span class="material-symbols-outlined" style="font-size: 15px;">checklist</span>
@@ -405,8 +938,40 @@
         </span>
         <h2 class="section-title">What's Included in Every Build</h2>
         <p class="section-subtitle">
-          Every detail is laid out upfront so you know exactly what is included.
+          Every trade website is delivered with standard core foundations so you know exactly what you get — with zero hidden surprises.
         </p>
+      </div>
+
+      <!-- 4 Core Standard Inclusions -->
+      <div class="inclusions-banner-grid">
+        <div class="inclusion-pillar-card">
+          <span class="material-symbols-outlined inclusion-pillar-icon">payments</span>
+          <div>
+            <h4 class="inclusion-pillar-title">One-Time Fixed Price</h4>
+            <p class="inclusion-pillar-desc">50% deposit to lock in sprint, 50% only on approval. Zero monthly bills or subscription locks.</p>
+          </div>
+        </div>
+        <div class="inclusion-pillar-card">
+          <span class="material-symbols-outlined inclusion-pillar-icon">key</span>
+          <div>
+            <h4 class="inclusion-pillar-title">100% Code Ownership</h4>
+            <p class="inclusion-pillar-desc">You own all HTML, CSS, assets, and your domain outright. Zero platform hostage fees.</p>
+          </div>
+        </div>
+        <div class="inclusion-pillar-card">
+          <span class="material-symbols-outlined inclusion-pillar-icon">travel_explore</span>
+          <div>
+            <h4 class="inclusion-pillar-title">Basic SEO &amp; Schema</h4>
+            <p class="inclusion-pillar-desc">State trade licence headers and suburb schema configured so Google indexes your service radius.</p>
+          </div>
+        </div>
+        <div class="inclusion-pillar-card">
+          <span class="material-symbols-outlined inclusion-pillar-icon">bolt</span>
+          <div>
+            <h4 class="inclusion-pillar-title">Mobile-First 4G Speed</h4>
+            <p class="inclusion-pillar-desc">Pure lightweight static code built for instant loading on job sites and emergency home searches.</p>
+          </div>
+        </div>
       </div>
 
       <div style="overflow-x: auto;">
@@ -485,7 +1050,7 @@
       </div>
     </section>
 
-    <!-- SECTION 4: RADICAL HOSTING TRANSPARENCY (OPEN EDITORIAL SECTION — NO BOXES IN BOXES) -->
+    <!-- SECTION 6: RADICAL HOSTING TRANSPARENCY (OPEN EDITORIAL SECTION — NO BOXES IN BOXES) -->
     <section id="hosting-breakdown" class="site-wrapper" style="padding-bottom: clamp(48px, 7vh, 88px); border-top: 1px solid var(--border-subtle); padding-top: clamp(40px, 6vh, 64px);">
       <div class="section-header">
         <span class="section-eyebrow">
@@ -543,7 +1108,7 @@
       </div>
     </section>
 
-    <!-- SECTION 5: IN-DEPTH SERVICES FAQS (CLEAN EDITORIAL ACCORDION) -->
+    <!-- SECTION 7: IN-DEPTH SERVICES FAQS (CLEAN EDITORIAL ACCORDION) -->
     <section id="faq" class="faq-section">
       <div class="site-wrapper">
         <div class="section-header text-center">
@@ -639,7 +1204,7 @@
     </div>
   </section>
 
-    <!-- SECTION 6: FINAL CTA (OPEN EDITORIAL BANNER — ZERO BOXES) -->
+    <!-- SECTION 8: FINAL CTA (OPEN EDITORIAL BANNER — ZERO BOXES) -->
     <section class="final-cta-section site-wrapper">
       <div class="final-cta-open">
         <div class="final-cta-content">
